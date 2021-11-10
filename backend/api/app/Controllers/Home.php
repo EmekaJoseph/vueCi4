@@ -10,6 +10,6 @@ class Home extends BaseController
     }
     public function getAll_api()
     {
-        return $this->response->setJSON('api responded!');
+        return $this->response->setJSON('api responded with this message!');
     }
 }
