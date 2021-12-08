@@ -22,10 +22,10 @@
 </template>
 
 <script>
-  import { reactive, toRefs } from 'vue'
-  import { useRouter, useRoute } from "vue-router";
+  import { reactive } from 'vue'
+  import { useRouter } from "vue-router";
   export default {
-    name: "Home",
+    name: "Login",
     setup(props) {
       const router = useRouter();
 
