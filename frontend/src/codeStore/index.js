@@ -9,16 +9,14 @@ const values = reactive({
 })
 
 const methods = {
-    splitWords: (str) =>
-    {
+    splitWords: (str) => {
         str = str.replace(/(^\s*)|(\s*$)/gi, "");
         str = str.replace(/[ ]{2,}/gi, " ");
         str = str.replace(/\n /, "\n");
         return str.split(' ');
     },
 
-    removeDuplicates: (array) =>
-    {
+    removeDuplicates: (array) => {
         return array.filter((a, b) => array.indexOf(a) === b)
         // let unique = [...new Set(array)]; // can remove dupliates too
     },
@@ -26,15 +24,13 @@ const methods = {
 
 
 
-    moveUp()
-    {
+    moveUp() {
         window.scrollTo(0, 0);
         //or this // document.getElementById('domID').scrollIntoView();
     },
 
 
-    plural: (num) =>
-    {
+    plural: (num) => {
         return num == 1 ? "" : "s"
     }
 

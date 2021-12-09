@@ -17,13 +17,14 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-6 mt-4">
-                <div v-if="isShowingNow(1)" class="card">
+                <div v-show="isShowingNow(1)" class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Upload File</h5>
+                        <h5 class="card-title">Upload File:</h5>
                         <fileUploadComponent />
+                        <!-- <input type="file" name="" id=""> -->
                     </div>
                 </div>
-                <div v-if="isShowingNow(2)" class="card">
+                <div v-show="isShowingNow(2)" class="card">
                     <div class="card-body">
                         <h5 class="card-title">Card {{tabNum}}</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
@@ -32,7 +33,7 @@
                             the card's content.</p>
                     </div>
                 </div>
-                <div v-if="isShowingNow(3)" class="card">
+                <div v-show="isShowingNow(3)" class="card">
                     <div class="card-body">
                         <h5 class="card-title">Card {{tabNum}}</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
@@ -65,10 +66,12 @@
     import axios from 'axios'
 
     import fileUploadComponent from '@/components/fileUploadComponent.vue'
+
     export default {
         components: {
             fileUploadComponent
         },
+        name: 'Dashboard',
         setup() {
             const codeStore = inject("codeStore");
             const baseURL = codeStore.constants.baseURL;
