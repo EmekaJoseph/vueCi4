@@ -44,6 +44,14 @@ Options All -Indexes
 	ErrorDocument 404 index.php
 </IfModule>
 
+
+# <IfModule mod_headers.c>
+# 	# header always set Access-Control-Allow-Origin '*'
+# 	# header always set Access-Control-Allow-Methods 'GET, POST, OPTIONS, PUT, DELETE'
+
+# </IfModule>
+
+
 # Disable server signature start
 	ServerSignature Off
 # Disable server signature end

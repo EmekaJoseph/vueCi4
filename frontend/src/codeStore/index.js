@@ -1,6 +1,6 @@
 import { reactive } from 'vue'
 const constants = {
-    baseURL: 'http://localhost/',//online
+    baseURL: 'http://localhost',//online
 
 }
 

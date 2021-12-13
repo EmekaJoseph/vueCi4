@@ -1,0 +1,320 @@
+CRITICAL - 2021-12-10 10:18:10 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vueCi4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vueCi4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 10:20:13 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vueCi4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vueCi4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 10:22:13 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vueCi4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vueCi4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 10:37:56 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vueCi4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vueCi4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 10:41:24 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vueCi4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vueCi4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 10:44:50 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vueCi4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vueCi4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 14:27:26 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 14:29:51 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 14:30:19 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 14:46:55 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 14:50:21 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 14:57:39 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 15:03:48 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 15:09:35 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 15:58:33 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:01:36 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:02:34 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:02:37 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:21:28 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:23:07 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:24:54 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:26:20 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:41:15 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:44:28 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:45:21 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:45:52 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:47:57 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:50:05 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:50:30 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:58:19 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 16:58:43 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 17:00:41 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 17:01:00 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 17:01:34 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 17:07:03 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 17:07:36 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 17:08:38 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 17:11:29 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 17:19:35 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-10 17:20:10 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

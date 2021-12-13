@@ -20,8 +20,10 @@ $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
-$routes->set404Override();
 $routes->setAutoRoute(true);
+$routes->set404Override(function () {
+    return view('welcome_message');
+});
 
 /*
  * --------------------------------------------------------------------
@@ -32,10 +34,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/getAll', 'Home::getAll_api');
-$routes->set404Override(function () {
-    return view('index');
-});
+$routes->add('/submitImage', 'Home::submitImage');
 
 /*
  * --------------------------------------------------------------------

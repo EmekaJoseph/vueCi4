@@ -1,0 +1,252 @@
+CRITICAL - 2021-12-11 02:14:59 --> Invalid file: index.php
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Common.php(1097): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\vue-ci4\backend\api\app\Config\Routes.php(25): view('index')
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(841): CodeIgniter\Router\RouteCollection->Config\{closure}('Controller or i...')
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-11 02:23:34 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 25)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 02:31:51 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 20)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 02:32:16 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 20)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 02:32:48 --> Undefined property: App\Controllers\Home::$input
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 20)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 02:42:35 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 24)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 02:43:17 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 24)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 02:43:21 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 24)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 03:57:43 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 03:58:33 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 04:01:21 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 04:06:17 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 04:07:12 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 04:09:19 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 04:09:23 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-11 04:10:06 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-11 04:10:10 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-11 04:10:15 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-11 04:11:18 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 04:11:41 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 04:16:28 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 04:16:58 --> Array to string conversion
+#0 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-11 04:39:39 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-11 04:47:25 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-11 05:07:32 --> The framework needs the following extension(s) installed and loaded: GD.
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(312): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(305): CodeIgniter\Config\BaseService::getSharedInstance('image', NULL, NULL)
+#5 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image()
+#6 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(23): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#7 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#8 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-11 05:07:54 --> The framework needs the following extension(s) installed and loaded: GD.
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(312): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(305): CodeIgniter\Config\BaseService::getSharedInstance('image', NULL, NULL)
+#5 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image()
+#6 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(23): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#7 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#8 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-11 05:09:18 --> The framework needs the following extension(s) installed and loaded: IMAGICK.
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\Images\Handlers\ImageMagickHandler.php(53): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('IMAGICK')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(312): CodeIgniter\Images\Handlers\ImageMagickHandler->__construct(Object(Config\Images))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image('imagick', Object(Config\Images), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(305): CodeIgniter\Config\BaseService::getSharedInstance('image', 'imagick', NULL)
+#5 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image('imagick')
+#6 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(23): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#7 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#8 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-11 05:10:59 --> The framework needs the following extension(s) installed and loaded: GD.
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(312): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(305): CodeIgniter\Config\BaseService::getSharedInstance('image', NULL, NULL)
+#5 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image()
+#6 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(23): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#7 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#8 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-11 05:14:05 --> The framework needs the following extension(s) installed and loaded: GD.
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(312): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#4 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\Services.php(305): CodeIgniter\Config\BaseService::getSharedInstance('image', NULL, NULL)
+#5 C:\xampp\htdocs\vue-ci4\backend\api\system\Config\BaseService.php(248): CodeIgniter\Config\Services::image()
+#6 C:\xampp\htdocs\vue-ci4\backend\api\app\Controllers\Home.php(23): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#7 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#8 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-12-11 05:25:22 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-11 05:38:27 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-11 16:07:37 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-12-11 16:35:07 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->submitImage()
+#1 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vue-ci4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vue-ci4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
