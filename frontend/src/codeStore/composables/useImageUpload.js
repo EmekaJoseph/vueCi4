@@ -1,20 +1,25 @@
 import { ref, watch, reactive, computed } from 'vue'
 
-export function useImageUpload() {
+export function useImageUpload()
+{
     const imageFile = ref('')
     const imageURL = ref('')
 
     const imgSize = reactive({
-        kb: computed(() => {
+        kb: computed(() =>
+        {
             return (imageFile.value.size / 1024).toFixed(2)
         }),
-        mb: computed(() => {
+        mb: computed(() =>
+        {
             return (imgSize.kb / 1024).toFixed(2)
         })
     })
 
-    function handleFileUpload(event) {
-        if (event.target.files.length === 0) {
+    function handleFileUpload(event)
+    {
+        if (event.target.files.length === 0)
+        {
             imageFile.value = ''
             imageURL.value = ''
             return
@@ -22,13 +27,16 @@ export function useImageUpload() {
         imageFile.value = event.target.files[0]
     }
 
-    watch(imageFile, (imageFile) => {
-        if (!(imageFile instanceof File)) {
+    watch(imageFile, (imageFile) =>
+    {
+        if (!(imageFile instanceof File))
+        {
             return;
         }
         let fileReader = new FileReader
         fileReader.readAsDataURL(imageFile)
-        fileReader.addEventListener('load', () => {
+        fileReader.addEventListener('load', () =>
+        {
             imageURL.value = fileReader.result
         })
     })
