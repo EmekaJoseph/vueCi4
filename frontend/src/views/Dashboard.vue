@@ -8,9 +8,9 @@
                     <div><button @click="navigate(1)" class="btn" :class="{active: isShowingNow(1)}">FILE
                             UPLOAD</button>
                     </div>
-                    <div><button @click="navigate(2)" class="btn" :class="{active: isShowingNow(2)}">MENU 2</button>
+                    <div><button @click="navigate(2)" class="btn" :class="{active: isShowingNow(2)}">INPUT/LIST</button>
                     </div>
-                    <div><button @click="navigate(3)" class="btn" :class="{active: isShowingNow(3)}">MENU 3</button>
+                    <div><button @click="navigate(3)" class="btn" :class="{active: isShowingNow(3)}">DATATABLE</button>
                     </div>
                 </div>
             </div>
@@ -21,39 +21,44 @@
                     <div class="card-body">
                         <h5 class="card-title">Upload File:</h5>
                         <fileUploadComponent />
-                        <!-- <input type="file" name="" id=""> -->
                     </div>
                 </div>
                 <div v-show="isShowingNow(2)" class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Card {{tabNum}}</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.</p>
+                        Typing: <b>{{itemInput}}</b>
+                        <span class="float-end fw-bold">{{itemsList.length}}</span> <br> <br>
+                        <form @submit.prevent="addToList">
+                            <input v-model.trim="itemInput" type="text" class="form-control">
+                        </form> <br>
+                        <span v-if="itemsList.length">
+                            <ul>
+                                <li class="d-flex justify-content-between" v-for="(i, index) in itemsList" :key="i.id">
+                                    <span> <b>{{index+1}}.</b> {{i.Text}}</span>
+                                    <span>
+                                        <button @click="removeItem(index)"
+                                            class=" ms-5 btn btn-link p-0 m-0 text-danger btn-small">delete</button>
+                                    </span>
+                                </li>
+                            </ul>
+                        </span>
                     </div>
                 </div>
                 <div v-show="isShowingNow(3)" class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Card {{tabNum}}</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.</p>
+                        <div class="table-responsive">
+                            <table class="table" id="myTable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,8 +67,9 @@
 </template>
 
 <script>
-    import { inject, onMounted, ref } from 'vue'
+    import { inject, ref, onMounted } from 'vue'
     import axios from 'axios'
+    import $ from 'jquery'
 
     import fileUploadComponent from '@/components/fileUploadComponent.vue'
 
@@ -79,7 +85,7 @@
             const tabNum = ref(1)
 
             onMounted(() => {
-                //tryFetch();
+                fetchFreeAPI()
             });
 
             const isShowingNow = (num) => {
@@ -90,17 +96,78 @@
                 tabNum.value = num
             }
 
-            const tryFetch = async () => {
-                let url = baseURL + 'getAll'
+            // list
+            const itemInput = ref('')
+            const itemsList = ref([])
+            const addToList = () => {
+                if (itemInput.value.length) {
+                    itemsList.value.push({
+                        Text: itemInput.value,
+                        id: Date.now()
+                    })
+                }
+                itemInput.value = ''
+            }
+            function removeItem(id) {
+                let text = "Sure You Want to Delete this?";
+                if (confirm(text) == true) {
+                    itemsList.value.splice(id, 1)
+                }
+
+            }
+
+
+
+            //DataTable
+            const tableArray = ref([])
+            const fetchFreeAPI = async () => {
+                let url = 'https://jsonplaceholder.typicode.com/posts'
                 try {
                     var { data } = await axios.get(url);
-                    u_val.response = data;
+                    console.log(data)
+                    tableArray.value = data
+
+                    $('#myTable').DataTable({
+                        data: tableArray.value,
+                        columns: [
+                            { data: 'id' },
+                            { data: 'title' },
+                            {
+                                data: 'id',
+                                render: (data) => {
+                                    return '<button data-id="' + data + '" id="deleteBtn" class="btn btn-link">delete</button>'
+                                }
+                            }
+
+                        ],
+                        "paging": true,
+                        // "lengthChange": false,
+                        // "searching": false,
+                        "ordering": false,
+                        "info": false,
+                        "autoWidth": false,
+                        "responsive": true
+
+                    });
                 } catch (error) {
                     console.log(error);
                 }
             }
+
+            $(document).on('click', '#deleteBtn', function () {
+                let id = $(this).data('id')
+                showID(id)
+            })
+
+            function showID(id) {
+                let thisData = tableArray.value.find(x => x.id == id)
+                alert(id)
+                console.log(thisData)
+            }
+
             return {
-                u_val, isShowingNow, navigate, tabNum
+                u_val, isShowingNow, navigate, tabNum,
+                itemInput, itemsList, addToList, removeItem,
             }
         },
     };
