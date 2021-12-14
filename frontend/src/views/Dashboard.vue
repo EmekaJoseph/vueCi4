@@ -49,6 +49,7 @@
                             <table class="table" id="myTable">
                                 <thead>
                                     <tr>
+                                        <th scope="col">S/N</th>
                                         <th scope="col">ID</th>
                                         <th scope="col">Title</th>
                                         <th scope="col">Delete</th>
@@ -130,6 +131,12 @@
                     $('#myTable').DataTable({
                         data: tableArray.value,
                         columns: [
+                            {
+                                data: null,
+                                render: (data, type, row, meta) => {
+                                    return meta.row + 1
+                                }
+                            },
                             { data: 'id' },
                             { data: 'title' },
                             {
