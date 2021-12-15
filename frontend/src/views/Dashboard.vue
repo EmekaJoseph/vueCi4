@@ -28,7 +28,8 @@
                         Typing: <b>{{itemInput}}</b>
                         <span class="float-end fw-bold">{{itemsList.length}}</span> <br> <br>
                         <form @submit.prevent="addToList">
-                            <input v-model.trim="itemInput" type="text" class="form-control">
+                            <input v-model.trim="itemInput" type="text" placeholder="enter name here"
+                                class="form-control">
                         </form> <br>
                         <span v-if="itemsList.length">
                             <ul>
@@ -67,123 +68,109 @@
     </div>
 </template>
 
-<script>
+<script setup>
     import { inject, ref, onMounted } from 'vue'
     import axios from 'axios'
     import $ from 'jquery'
 
     import fileUploadComponent from '@/components/fileUploadComponent.vue'
 
-    export default {
-        components: {
-            fileUploadComponent
-        },
-        name: 'Dashboard',
-        setup() {
-            const codeStore = inject("codeStore");
-            const baseURL = codeStore.constants.baseURL;
-            const u_val = codeStore.values
-            const tabNum = ref(1)
+    const codeStore = inject("codeStore");
+    const baseURL = codeStore.constants.baseURL;
+    const u_val = codeStore.values
+    const tabNum = ref(1)
 
-            onMounted(() => {
-                fetchFreeAPI()
-            });
+    onMounted(() => {
+        fetchFreeAPI()
+    });
 
-            const isShowingNow = (num) => {
-                return tabNum.value == num ? true : false
-            }
+    const isShowingNow = (num) => {
+        return tabNum.value == num ? true : false
+    }
 
-            function navigate(num) {
-                tabNum.value = num
-            }
+    function navigate(num) {
+        tabNum.value = num
+    }
 
-            // list
-            const itemInput = ref('')
-            const itemsList = ref([])
-            const addToList = () => {
-                if (itemInput.value.length) {
-                    itemsList.value.push({
-                        Text: itemInput.value,
-                        id: Date.now()
-                    })
-                }
-                itemInput.value = ''
-            }
-            function removeItem(id) {
-                let text = "Sure You Want to Delete this?";
-                if (confirm(text) == true) {
-                    itemsList.value.splice(id, 1)
-                }
-
-            }
-
-
-
-            //DataTable
-            const tableArray = ref([])
-            const fetchFreeAPI = async () => {
-                let url = 'https://jsonplaceholder.typicode.com/posts'
-                try {
-                    var { data } = await axios.get(url);
-                    console.log(data)
-                    tableArray.value = data
-
-                    $('#myTable').DataTable({
-                        dom: 'Bfrtip',
-                        buttons: [
-                            'excel', 'csv'
-                        ],
-                        data: tableArray.value,
-                        columns: [
-                            {
-                                data: null,
-                                render: (data, type, row, meta) => {
-                                    return meta.row + 1
-                                }
-                            },
-                            { data: 'id' },
-                            { data: 'title' },
-                            {
-                                data: null,
-                                render: (data) => {
-                                    let conditionalBtn = '<button data-id="' + data.id + '" id="deleteBtn" class="btn btn-link">delete</button>'
-                                    return conditionalBtn
-                                }
-                            }
-
-                        ],
-
-                        "paging": true,
-                        "lengthChange": false,
-                        "searching": true,
-                        "ordering": false,
-                        "info": false,
-                        "autoWidth": false,
-                        "responsive": true
-
-                    });
-                } catch (error) {
-                    console.log(error);
-                }
-            }
-
-            $(document).on('click', '#deleteBtn', function () {
-                let id = $(this).data('id')
-                showID(id)
+    // list
+    const itemInput = ref('')
+    const itemsList = ref([])
+    const addToList = () => {
+        if (itemInput.value.length) {
+            itemsList.value.push({
+                Text: itemInput.value,
+                id: Date.now()
             })
+        }
+        itemInput.value = ''
+        console.log(itemsList.value);
+    }
+    function removeItem(id) {
+        let text = "Sure You Want to Delete this?";
+        if (confirm(text) == true) {
+            itemsList.value.splice(id, 1)
+        }
 
-            function showID(id) {
-                let thisData = tableArray.value.find(x => x.id == id)
-                alert(id)
-                console.log(thisData)
-            }
+    }
 
-            return {
-                u_val, isShowingNow, navigate, tabNum,
-                itemInput, itemsList, addToList, removeItem,
-            }
-        },
-    };
+    //DataTable
+    const tableArray = ref([])
+    const fetchFreeAPI = async () => {
+        let url = 'https://jsonplaceholder.typicode.com/posts'
+        try {
+            var { data } = await axios.get(url);
+            console.log(data)
+            tableArray.value = data
+
+            $('#myTable').DataTable({
+                // dom: 'Bfrtip',
+                // buttons: [
+                //     'excel', 'csv'
+                // ],
+                data: tableArray.value,
+                columns: [
+                    {
+                        data: null,
+                        render: (data, type, row, meta) => {
+                            return '<b>' + (meta.row + 1) + '</b>'
+                        }
+                    },
+                    { data: 'userId' },
+                    { data: 'title' },
+                    {
+                        data: 'id',
+                        render: (data) => {
+                            const conditionalBtn = '<button data-id="' + data + '" id="deleteBtn" class="btn btn-link">delete</button>'
+                            return conditionalBtn
+                        }
+                    }
+
+                ],
+
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": true
+
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    $(document).on('click', '#deleteBtn', function () {
+        let id = $(this).data('id')
+        showID(id)
+    })
+
+    function showID(id) {
+        let thisData = tableArray.value.find(x => x.id == id)
+        alert(id)
+        console.log(thisData)
+    }
 </script>
 
 <style scoped>
