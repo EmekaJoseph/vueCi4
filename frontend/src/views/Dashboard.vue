@@ -129,6 +129,10 @@
                     tableArray.value = data
 
                     $('#myTable').DataTable({
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'excel', 'csv'
+                        ],
                         data: tableArray.value,
                         columns: [
                             {
@@ -140,16 +144,18 @@
                             { data: 'id' },
                             { data: 'title' },
                             {
-                                data: 'id',
+                                data: null,
                                 render: (data) => {
-                                    return '<button data-id="' + data + '" id="deleteBtn" class="btn btn-link">delete</button>'
+                                    let conditionalBtn = '<button data-id="' + data.id + '" id="deleteBtn" class="btn btn-link">delete</button>'
+                                    return conditionalBtn
                                 }
                             }
 
                         ],
+
                         "paging": true,
-                        // "lengthChange": false,
-                        // "searching": false,
+                        "lengthChange": false,
+                        "searching": true,
                         "ordering": false,
                         "info": false,
                         "autoWidth": false,
