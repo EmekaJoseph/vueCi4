@@ -32,60 +32,44 @@
     </div>
 </template>
 
-<script>
+<script setup>
     import { inject, onMounted, ref, computed, reactive } from 'vue'
     import { useImageUpload } from '@/codeStore/composables/useImageUpload.js'
     import axios from 'axios'
-    export default {
-        name: 'fileUploadComponent',
-        setup()
-        {
-            const codeStore = inject("codeStore");
-            const baseURL = codeStore.constants.baseURL;
+    const codeStore = inject("codeStore");
+    const baseURL = codeStore.constants.baseURL;
 
-            let { handleFileUpload, imageURL, imageFile, imgSize } = useImageUpload()
+    let { handleFileUpload, imageURL, imageFile, imgSize } = useImageUpload()
 
 
-            function chooseImage()
-            {
-                document.getElementById("fileUp").click()
-            }
-            function clearImage()
-            {
-                imageURL.value = ''
-                imageFile.value = ''
-                let form = document.getElementById("formID")
-                form.reset()
-            }
+    function chooseImage() {
+        document.getElementById("fileUp").click()
+    }
+    function clearImage() {
+        imageURL.value = ''
+        imageFile.value = ''
+        let form = document.getElementById("formID")
+        form.reset()
+    }
 
-            async function returnSt()
-            {
-                let imageData = new FormData()
-                imageData.append("image", imageFile.value)
+    async function returnSt() {
+        let imageData = new FormData()
+        imageData.append("image", imageFile.value)
 
 
-                let urlPI = baseURL + '/submitImage'
-                const headers = {
-                    "Content-Type": "multipart/form-data",
-                    "X-Requested-With": "XMLHttpRequest",
-                };
-                try
-                {
-                    var { data } = await axios.post(urlPI, imageData, headers);
-                    console.log('submited: ', data);
-                    alert('image uploaded successfully')
-                    clearImage()
-                } catch (error)
-                {
-                    console.log(error);
-                    alert('Something went wrong abeg')
-                }
-            }
-
-            return {
-                handleFileUpload, imageURL, imageFile, clearImage, chooseImage,
-                returnSt, imgSize
-            }
+        let urlPI = baseURL + '/submitImage'
+        const headers = {
+            "Content-Type": "multipart/form-data",
+            "X-Requested-With": "XMLHttpRequest",
+        };
+        try {
+            var { data } = await axios.post(urlPI, imageData, headers);
+            console.log('submited: ', data);
+            alert('image uploaded successfully')
+            clearImage()
+        } catch (error) {
+            console.log(error);
+            alert('Something went wrong abeg')
         }
     }
 </script>
