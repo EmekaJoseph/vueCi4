@@ -1,16 +1,23 @@
 <template>
     <div class="container">
-
         <div class="row justify-content-center">
             <!-- <h1 class="text-center">{{u_val.response}}</h1> -->
             <div class="col-6 mt-5">
                 <div class="d-flex justify-content-between">
-                    <div><button @click="navigate(1)" class="btn" :class="{active: isShowingNow(1)}">FILE
-                            UPLOAD</button>
+                    <div>
+                        <button @click="navigate(1)" class="btn" :class="{ active: isShowingNow(1) }">
+                            FILE UPLOAD
+                        </button>
                     </div>
-                    <div><button @click="navigate(2)" class="btn" :class="{active: isShowingNow(2)}">INPUT/LIST</button>
+                    <div>
+                        <button @click="navigate(2)" class="btn" :class="{ active: isShowingNow(2) }">
+                            INPUT/LIST
+                        </button>
                     </div>
-                    <div><button @click="navigate(3)" class="btn" :class="{active: isShowingNow(3)}">DATATABLE</button>
+                    <div>
+                        <button @click="navigate(3)" class="btn" :class="{ active: isShowingNow(3) }">
+                            DATATABLE
+                        </button>
                     </div>
                 </div>
             </div>
@@ -25,19 +32,24 @@
                 </div>
                 <div v-show="isShowingNow(2)" class="card">
                     <div class="card-body">
-                        Typing: <b>{{itemInput}}</b>
-                        <span class="float-end fw-bold">{{itemsList.length}}</span> <br> <br>
+                        Typing: <b>{{ itemInput }}</b>
+                        <span class="float-end fw-bold">{{ itemsList.length }}</span> <br />
+                        <br />
                         <form @submit.prevent="addToList">
                             <input v-model.trim="itemInput" type="text" placeholder="enter name here"
-                                class="form-control">
-                        </form> <br>
+                                class="form-control" />
+                        </form>
+                        <br />
                         <span v-if="itemsList.length">
                             <ul>
                                 <li class="d-flex justify-content-between" v-for="(i, index) in itemsList" :key="i.id">
-                                    <span> <b>{{index+1}}.</b> {{i.Text}}</span>
+                                    <span>
+                                        <b>{{ index + 1 }}.</b> {{ i.Text }}</span>
                                     <span>
                                         <button @click="removeItem(index)"
-                                            class=" ms-5 btn btn-link p-0 m-0 text-danger btn-small">delete</button>
+                                            class="ms-5 btn btn-link p-0 m-0 text-danger btn-small">
+                                            delete
+                                        </button>
                                     </span>
                                 </li>
                             </ul>
@@ -56,9 +68,7 @@
                                         <th scope="col">Delete</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-
-                                </tbody>
+                                <tbody></tbody>
                             </table>
                         </div>
                     </div>
@@ -69,60 +79,59 @@
 </template>
 
 <script setup>
-    import { inject, ref, onMounted } from 'vue'
-    import axios from 'axios'
-    import $ from 'jquery'
+    import { inject, ref, onMounted } from "vue";
+    import axios from "axios";
+    import $ from "jquery";
 
-    import fileUploadComponent from '@/components/fileUploadComponent.vue'
+    import fileUploadComponent from "@/components/fileUploadComponent.vue";
 
     const codeStore = inject("codeStore");
     const baseURL = codeStore.constants.baseURL;
-    const u_val = codeStore.values
-    const tabNum = ref(1)
+    const u_val = codeStore.values;
+    const tabNum = ref(1);
 
     onMounted(() => {
-        fetchFreeAPI()
+        fetchFreeAPI();
     });
 
     const isShowingNow = (num) => {
-        return tabNum.value == num ? true : false
-    }
+        return tabNum.value == num ? true : false;
+    };
 
     function navigate(num) {
-        tabNum.value = num
+        tabNum.value = num;
     }
 
     // list
-    const itemInput = ref('')
-    const itemsList = ref([])
+    const itemInput = ref("");
+    const itemsList = ref([]);
     const addToList = () => {
         if (itemInput.value.length) {
             itemsList.value.push({
                 Text: itemInput.value,
-                id: Date.now()
-            })
+                id: Date.now(),
+            });
         }
-        itemInput.value = ''
+        itemInput.value = "";
         console.log(itemsList.value);
-    }
+    };
     function removeItem(id) {
         let text = "Sure You Want to Delete this?";
         if (confirm(text) == true) {
-            itemsList.value.splice(id, 1)
+            itemsList.value.splice(id, 1);
         }
-
     }
 
     //DataTable
-    const tableArray = ref([])
+    const tableArray = ref([]);
     const fetchFreeAPI = async () => {
-        let url = 'https://jsonplaceholder.typicode.com/posts'
+        let url = "https://jsonplaceholder.typicode.com/posts";
         try {
             var { data } = await axios.get(url);
-            console.log(data)
-            tableArray.value = data
+            console.log(data);
+            tableArray.value = data;
 
-            $('#myTable').DataTable({
+            $("#myTable").DataTable({
                 // dom: 'Bfrtip',
                 // buttons: [
                 //     'excel', 'csv'
@@ -132,44 +141,42 @@
                     {
                         data: null,
                         render: (data, type, row, meta) => {
-                            return '<b>' + (meta.row + 1) + '</b>'
-                        }
+                            return "<b>" + (meta.row + 1) + "</b>";
+                        },
                     },
-                    { data: 'userId' },
-                    { data: 'title' },
+                    { data: "userId" },
+                    { data: "title" },
                     {
-                        data: 'id',
+                        data: "id",
                         render: (data) => {
-                            const conditionalBtn = '<button data-id="' + data + '" id="deleteBtn" class="btn btn-link">delete</button>'
-                            return conditionalBtn
-                        }
-                    }
-
+                            const conditionalBtn = '<button data-id="' + data + '" id="deleteBtn" class="btn btn-link">delete</button>';
+                            return conditionalBtn;
+                        },
+                    },
                 ],
 
-                "paging": true,
-                "lengthChange": false,
-                "searching": true,
-                "ordering": false,
-                "info": false,
-                "autoWidth": false,
-                "responsive": true
-
+                paging: true,
+                lengthChange: false,
+                searching: true,
+                ordering: false,
+                info: false,
+                autoWidth: false,
+                responsive: true,
             });
         } catch (error) {
             console.log(error);
         }
-    }
+    };
 
-    $(document).on('click', '#deleteBtn', function () {
-        let id = $(this).data('id')
-        showID(id)
-    })
+    $(document).on("click", "#deleteBtn", function () {
+        let id = $(this).data("id");
+        showID(id);
+    });
 
     function showID(id) {
-        let thisData = tableArray.value.find(x => x.id == id)
-        alert(id)
-        console.log(thisData)
+        let thisData = tableArray.value.find((x) => x.id == id);
+        alert(id);
+        console.log(thisData);
     }
 </script>
 
