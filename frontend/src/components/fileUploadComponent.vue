@@ -2,7 +2,6 @@
     <div class="container mt-5">
         <form @submit.prevent="returnSt" ref="ImgForm" id="formID">
             <div class="mb-3">
-                Prop: {{props.name}}
                 <input class="form-control" accept="image/jpg, image/png" ref="mainImgBtn" id="fileUp" type="file"
                     @change="handleFileUpload" hidden />
 
@@ -41,7 +40,6 @@
     const codeStore = inject("codeStore");
     const baseURL = codeStore.constants.baseURL;
 
-
     // //props
     // const props = defineProps({
     //     name: {
@@ -59,18 +57,21 @@
 
     let { handleFileUpload, imageURL, imageFile, imgSize } = useImageUpload();
 
-    const mainImgBtn = ref(null)
-    const ImgForm = ref(null)
-    function chooseImage() {
+    const mainImgBtn = ref(null);
+    const ImgForm = ref(null);
+    function chooseImage()
+    {
         mainImgBtn.value.click();
     }
-    function clearImage() {
+    function clearImage()
+    {
         imageURL.value = "";
         imageFile.value = "";
         ImgForm.value.reset();
     }
 
-    async function returnSt() {
+    async function returnSt()
+    {
         let imageData = new FormData();
         imageData.append("image", imageFile.value);
 
@@ -79,12 +80,14 @@
             "Content-Type": "multipart/form-data",
             "X-Requested-With": "XMLHttpRequest",
         };
-        try {
+        try
+        {
             var { data } = await axios.post(urlPI, imageData, headers);
             console.log("submited: ", data);
             alert("image uploaded successfully");
             clearImage();
-        } catch (error) {
+        } catch (error)
+        {
             console.log(error);
             alert("Something went wrong abeg");
         }
