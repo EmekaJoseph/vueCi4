@@ -209,7 +209,7 @@
     const varColorBg = ref('yellow')
 </script>
 
-<style>
+<style scoped>
     .active {
         border-bottom: rgb(144, 240, 48) 5px solid;
         font-weight: bold;
