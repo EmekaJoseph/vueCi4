@@ -19,6 +19,11 @@
                             DATATABLE
                         </button>
                     </div>
+                    <div>
+                        <button @click="navigate(4)" class="btn" :class="{ active: isShowingNow(4) }">
+                            OTHERS
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +68,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">S/N</th>
-                                        <th scope="col">ID</th>
+                                        <!-- <th scope="col">ID</th> -->
                                         <th scope="col">Title</th>
                                         <th scope="col">Delete</th>
                                     </tr>
@@ -71,6 +76,24 @@
                                 <tbody></tbody>
                             </table>
                         </div>
+                    </div>
+                </div>
+                <div v-show="isShowingNow(4)" class="card">
+                    <div class="card-body">
+                        <p class="card-header fw-bold p-2 mb-3">Color Changer:</p>
+                        <div class="d-flex justify-content-between">
+                            <span>
+                                <label for="textColor">TextColor:</label>
+                                <input id="textColor" class="form-control" v-model="varColor" type="text"> <br>
+                                <label for="bgColor">Background:</label>
+                                <input id="bgColor" class="form-control" v-model="varColorBg" type="text">
+
+                            </span>
+                            <span id="altText" class="h4">
+                                TextColor
+                            </span>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -126,6 +149,7 @@
     const tableArray = ref([]);
     const fetchFreeAPI = async () => {
         let url = "https://jsonplaceholder.typicode.com/posts";
+        // let url = baseURL + '/getList'
         try {
             var { data } = await axios.get(url);
             console.log(data);
@@ -144,7 +168,7 @@
                             return "<b>" + (meta.row + 1) + "</b>";
                         },
                     },
-                    { data: "userId" },
+                    // { data: "userId" },
                     { data: "title" },
                     {
                         data: "id",
@@ -161,7 +185,7 @@
                 ordering: false,
                 info: false,
                 autoWidth: false,
-                responsive: true,
+                responsive: false,
             });
         } catch (error) {
             console.log(error);
@@ -178,9 +202,14 @@
         alert(id);
         console.log(thisData);
     }
+
+
+    //others
+    const varColor = ref('#0085a1')
+    const varColorBg = ref('yellow')
 </script>
 
-<style scoped>
+<style>
     .active {
         border-bottom: rgb(144, 240, 48) 5px solid;
         font-weight: bold;
@@ -196,5 +225,11 @@
 
     .btn:hover {
         font-weight: bold;
+    }
+
+    #altText {
+        color: v-bind(varColor);
+        background-color: v-bind(varColorBg);
+        padding: 50px
     }
 </style>

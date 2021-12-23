@@ -35,6 +35,7 @@ $routes->set404Override(function () {
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->add('/submitImage', 'Home::submitImage');
+$routes->add('/getList', 'Home::getList');
 
 /*
  * --------------------------------------------------------------------

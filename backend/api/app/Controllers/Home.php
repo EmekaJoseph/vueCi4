@@ -41,4 +41,18 @@ class Home extends BaseController
 
         return $this->response->setJSON($dataToSave);
     }
+
+    public function getList()
+    {
+        $myArray = [];
+
+        array_push($myArray, (object)[
+            'id' => 1,
+            'title' => 'title',
+
+        ]);
+
+
+        return $this->response->setJSON($myArray);
+    }
 }
