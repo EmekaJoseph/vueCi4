@@ -1,11 +1,11 @@
 import { reactive } from 'vue'
 const constants = {
     baseURL: 'http://localhost',//online
-
 }
 
 const values = reactive({
-    response: null
+    response: null,
+    cart: []
 })
 
 const methods = {

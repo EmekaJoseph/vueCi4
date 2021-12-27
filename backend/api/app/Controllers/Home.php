@@ -46,11 +46,15 @@ class Home extends BaseController
     {
         $myArray = [];
 
-        array_push($myArray, (object)[
-            'id' => 1,
-            'title' => 'title',
+        for ($i = 1; $i < 5; $i++) {
+            array_push($myArray, (object)[
+                'id' => $i,
+                'title' => 'title_' . $i . '_' . uniqid(),
 
-        ]);
+            ]);
+        }
+
+
 
 
         return $this->response->setJSON($myArray);

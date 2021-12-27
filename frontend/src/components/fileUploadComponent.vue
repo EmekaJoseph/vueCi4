@@ -1,4 +1,5 @@
 <template>
+    <h5 class="card-title">Upload File:</h5>
     <div class="container mt-5">
         <form @submit.prevent="returnSt" ref="ImgForm" id="formID">
             <div class="mb-3">
@@ -59,19 +60,16 @@
 
     const mainImgBtn = ref(null);
     const ImgForm = ref(null);
-    function chooseImage()
-    {
+    function chooseImage() {
         mainImgBtn.value.click();
     }
-    function clearImage()
-    {
+    function clearImage() {
         imageURL.value = "";
         imageFile.value = "";
         ImgForm.value.reset();
     }
 
-    async function returnSt()
-    {
+    async function returnSt() {
         let imageData = new FormData();
         imageData.append("image", imageFile.value);
 
@@ -80,14 +78,12 @@
             "Content-Type": "multipart/form-data",
             "X-Requested-With": "XMLHttpRequest",
         };
-        try
-        {
+        try {
             var { data } = await axios.post(urlPI, imageData, headers);
             console.log("submited: ", data);
             alert("image uploaded successfully");
             clearImage();
-        } catch (error)
-        {
+        } catch (error) {
             console.log(error);
             alert("Something went wrong abeg");
         }
