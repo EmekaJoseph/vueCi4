@@ -9,7 +9,7 @@
                 </div>
                 <div class="modal-body ">
                     <div class="text-center" v-if="u_val.cart.length === 0">
-                        <h2>No Items</h2>
+                        <h2>Cart is empty</h2>
                     </div>
                     <div v-else>
                         <table class="table table-light">
@@ -52,7 +52,7 @@
                         <div class="d-flex justify-content-evenly">
                             <b>Total Amount:</b>
                             <span class="ms-2 w-25 row justify-content-center">
-                                <input :value="sumOfPrice()" type="text">
+                                <input :value="sumOfPrice()" type="text" class="fw-bold" disabled>
                             </span>
                         </div>
                     </div>
