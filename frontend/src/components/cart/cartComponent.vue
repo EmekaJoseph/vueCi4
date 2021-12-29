@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>
-        <h4>Items for sale:</h4>
+        <h5 class="card-header">Items for sale:</h5>
         </p>
         <p class="float-end">
             <b>Cart:</b>
@@ -37,7 +37,7 @@
 
 <script setup>
     import { ref, inject } from 'vue'
-    import cartModal from "@/components/cartModal.vue";
+    import cartModal from "@/components/cart/cartModal.vue";
 
 
     const codeStore = inject("codeStore");

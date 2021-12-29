@@ -7,7 +7,7 @@
                         empty cart
                     </button>
                 </div>
-                <div class="modal-body ">
+                <div class="modal-body">
                     <div class="text-center" v-if="u_val.cart.length === 0">
                         <h2>Cart is empty</h2>
                     </div>
@@ -31,7 +31,7 @@
                                     <td>{{item.price}}</td>
                                     <td>
                                         <input @keyup="updateQtyFromInput" :id="item.id" ref="currentInput"
-                                            :value="itemQty(item.id)" style="width: 50px;" type="text">
+                                            :value="item.qty" style="width: 50px;" type="text">
                                     </td>
                                     <td>
                                         <button @click="increaseItemQty(item.id)"
@@ -85,9 +85,9 @@
         u_val.cart = updatedList
     }
 
-    const itemQty = (id) => {
-        return u_val.cart.find(x => x.id == id).qty
-    }
+    // const itemQty = (id) => {
+    //     return u_val.cart.find(x => x.id == id).qty
+    // }
 
     const sumOfPrice = () => {
         let sum = 0.00
