@@ -21,7 +21,7 @@
                                     class="btn btn-outline-danger btn-sm">Remove fom cart</button>
                             </div>
                             <div v-else>
-                                <button @click="addToCart(item.id)" type="button" class="btn btn-primary btn-sm">Add To
+                                <button @click="addToCart(item)" type="button" class="btn btn-primary btn-sm">Add To
                                     Cart</button>
                             </div>
                         </td>
@@ -38,7 +38,6 @@
 <script setup>
     import { ref, inject } from 'vue'
     import cartModal from "@/components/cart/cartModal.vue";
-
 
     const codeStore = inject("codeStore");
     const u_val = codeStore.values;
@@ -62,23 +61,27 @@
             id: 4,
             name: 'Bread',
             price: 8000
+        },
+        {
+            id: 5,
+            name: 'Wheat',
+            price: 500
         }
     ])
-    function addToCart(id) {
-        let thisItem = itemsForSale.value.find(x => x.id == id)
+
+    function addToCart(thisItem) {
         thisItem.qty = 1
         u_val.cart.push(thisItem)
-        console.log(u_val.cart)
     }
+
     function removeFromCart(id) {
-        const updatedList = u_val.cart.filter(item => item.id !== id)
-        u_val.cart = updatedList
+        u_val.cart = u_val.cart.filter(item => item.id !== id)
     }
+
     const itemExistsOnCart = (id) => {
         let itemfound = u_val.cart.some((x) => x.id == id)
         return itemfound ? true : false
     }
-
 
 
     //cart

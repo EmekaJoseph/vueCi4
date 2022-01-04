@@ -34,11 +34,10 @@
                                             :value="item.qty" style="width: 50px;" type="text">
                                     </td>
                                     <td>
-                                        <button @click="increaseItemQty(item.id)"
-                                            class="btn btn-sm btn-success px-3">+</button>
+                                        <button @click="item.qty++" class="btn btn-sm btn-success px-3">+</button>
                                     </td>
                                     <td>
-                                        <button :disabled="ifzeroQty(item.id)" @click="decreaseItemQty(item.id)"
+                                        <button :disabled="ifzeroQty(item)" @click="item.qty--"
                                             class="btn btn-sm btn-danger px-3">-</button>
                                     </td>
                                     <td>
@@ -81,35 +80,18 @@
     }
 
     function removeFromCart(id) {
-        const updatedList = u_val.cart.filter(item => item.id !== id)
-        u_val.cart = updatedList
+        u_val.cart = u_val.cart.filter(item => item.id !== id)
     }
-
-    // const itemQty = (id) => {
-    //     return u_val.cart.find(x => x.id == id).qty
-    // }
 
     const sumOfPrice = () => {
         let sum = 0.00
         u_val.cart.forEach(item => {
-            sum += item.price * item.qty
+            sum += (item.price * item.qty)
         });
         return sum
     }
 
-
-    function increaseItemQty(id) {
-        let thisItem = u_val.cart.find(x => x.id == id)
-        thisItem.qty++
-    }
-
-    function decreaseItemQty(id) {
-        let thisItem = u_val.cart.find(x => x.id == id)
-        thisItem.qty--
-    }
-
-    const ifzeroQty = (id) => {
-        let thisItem = u_val.cart.find(x => x.id == id)
+    const ifzeroQty = (thisItem) => {
         return (thisItem.qty <= 1) ? true : false
     }
 
@@ -119,9 +101,10 @@
     }
 
     function checkOut() {
-        let itemsToBuy = {}
-        itemsToBuy.items = u_val.cart
-        itemsToBuy.total = sumOfPrice()
+        let itemsToBuy = {
+            items: u_val.cart,
+            total: sumOfPrice()
+        }
         console.log(itemsToBuy)
         close()
     }

@@ -21,9 +21,6 @@ const methods = {
         // let unique = [...new Set(array)]; // can remove dupliates too
     },
 
-
-
-
     moveUp() {
         window.scrollTo(0, 0);
         //or this // document.getElementById('domID').scrollIntoView();

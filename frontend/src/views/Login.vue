@@ -58,11 +58,5 @@
 </script>
 
 <style scoped>
-  input:focus,
-  select:focus,
-  textarea:focus,
-  button:focus {
-    outline: none;
-    box-shadow: none;
-  }
+
 </style>

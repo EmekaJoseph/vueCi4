@@ -1,5 +1,6 @@
 <template>
-    <h5 class="card-header">Todo List</h5> <br>
+
+    <div v-html="topic"></div>
     <div>
         <i class="small">{{ itemInput }}</i>
         <span class="float-end fw-bold">{{ itemsList.length }}</span> <br />
@@ -10,15 +11,14 @@
         <br />
         <span v-if="itemsList.length">
             <ul>
-                <li class="d-flex justify-content-between" v-for="(i, index) in itemsList" :key="i.id">
-                    <span v-if="i.Done"><strike><b>{{ index + 1 }}.</b> {{ i.Text }}</strike></span>
-                    <span v-else><b>{{ index + 1 }}.</b> {{ i.Text }}</span>
+                <li class="d-flex justify-content-between" v-for="(i, index) in itemsList" :key="i.Id">
+                    <span :class="{'text-decoration-line-through': i.Done}"><b>{{ index + 1 }}.</b> {{ i.Text }}</span>
                     <span>
                         <div class="form-check">
-                            <input v-model="i.Done" class="form-check-input" type="checkbox" value=""
-                                id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Done
+                            <input @change="updateLocalStorage" v-model="i.Done" class="form-check-input"
+                                type="checkbox" :id="'name'+ i.Id">
+                            <label class="form-check-label" :for="'name'+ i.Id">
+                                Completed
                             </label>
                         </div>
                     </span>
@@ -34,7 +34,17 @@
 </template>
 
 <script setup>
-    import { inject, ref } from "vue";
+    import { inject, ref, onMounted } from "vue";
+
+    onMounted(() => {
+        let storedItemList = localStorage.getItem('vue-todo')
+        if (storedItemList != null) {
+            itemsList.value = JSON.parse(storedItemList)
+        }
+    })
+
+    const topic = '<h5 class="card-header">Todo List...</h5> <br>';
+
     // list
     const itemInput = ref("");
     const itemsList = ref([]);
@@ -47,26 +57,23 @@
             });
         }
         itemInput.value = "";
-        console.log(itemsList.value);
+        updateLocalStorage()
     };
-    function removeItem(id) {
+    function removeItem(index) {
         let text = "Sure You Want to Delete this?";
         if (confirm(text) == true) {
-            itemsList.value.splice(id, 1);
+            itemsList.value.splice(index, 1);
+            updateLocalStorage()
         }
     }
 
-    function showStatus(e) {
-        // console.log('clicked', e.target.value)
+    function updateLocalStorage() {
+        localStorage.setItem('vue-todo', JSON.stringify(itemsList.value))
     }
+
+
 </script>
 
 <style scoped>
-    input:focus,
-    select:focus,
-    textarea:focus,
-    button:focus {
-        outline: none;
-        box-shadow: none;
-    }
+
 </style>
