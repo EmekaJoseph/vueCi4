@@ -1,5 +1,5 @@
 <template>
-  <navbarComponent :tabs="tabNames" @navigate="navigateToTab" />
+  <navbarComponent @navigate="navigateToTab" />
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-8 mt-4">
@@ -37,20 +37,7 @@
   import cart from "@/components/cart/cartComponent.vue";
   import navbarComponent from "@/components/navbarComponent.vue";
 
-  const codeStore = inject("codeStore");
-  const baseURL = codeStore.constants.baseURL;
-  const u_val = codeStore.values;
   const tabNum = ref(1);
-
-  const tabNames = ref(
-    [
-      { slot: 1, name: "FILE UPLOAD" },
-      { slot: 2, name: "TODO" },
-      { slot: 3, name: "DATATABLE" },
-      { slot: 4, name: "CART" },
-      { slot: 5, name: "OTHERS" },
-    ]
-  );
 
   const isShowingNow = (num) => {
     return tabNum.value == num ? true : false;

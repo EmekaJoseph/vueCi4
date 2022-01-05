@@ -2,36 +2,41 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Tools Page:</a>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
             <div class="ms-5 collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <!-- <span class="nav-link active" aria-current="page" href="#">Home</span> -->
-                    <span @click="navigateTo(listItem.slot)" v-for="listItem in tabs" :key="listItem.slot"
+                    <span @click="navigateTo(listItem.slot)" v-for="listItem in u_val.tabNames" :key="listItem.slot"
                         class="nav-link mx-3"
                         :class="{'active': (currentTab == listItem.slot)}">{{listItem.name}}</span>
 
+                    <div class="nav-item  dropdown">
+                        <a class="nav-link dropdown-toggle text-white-50" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            PAGES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="#">Test Page</a></li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
-            <span class="badge rounded-pill bg-secondary">
-                proffix.js
+            <span class="navbar-toggler border-0">
+                <span @click=" u_mtd.toggleOffCanvas" class="navbar-toggler-icon"></span>
             </span>
         </div>
     </nav>
+    <offCanvasComponent @navigate="navigateTo" />
 </template>
 
 <script setup>
-    import { ref } from 'vue'
-    //props
-    const props = defineProps({
-        tabs: {
-            type: Array,
-            default: [],
-            required: false,
-        },
-    });
+    import offCanvasComponent from "@/components/offCanvasComponent.vue";
+    import { inject, ref } from "vue";
+
+    const codeStore = inject("codeStore");
+    const u_val = codeStore.values;
+    const u_mtd = codeStore.methods;
+
 
     //emit
     const emits = defineEmits(['navigate'])
@@ -44,9 +49,6 @@
 </script>
 
 <style scoped>
-    /* .active {
-        border-bottom: #fff 1px solid;
-    } */
     .nav-link {
         cursor: pointer;
     }

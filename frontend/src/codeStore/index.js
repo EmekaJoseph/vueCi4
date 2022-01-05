@@ -5,10 +5,24 @@ const constants = {
 
 const values = reactive({
     response: null,
-    cart: []
+    cart: [],
+    tabNames: [
+        { slot: 1, name: "FILE UPLOAD" },
+        { slot: 2, name: "TODO" },
+        { slot: 3, name: "DATATABLE" },
+        { slot: 4, name: "CART" },
+        { slot: 5, name: "OTHERS" },
+    ],
+    //offcanvas
+    showOffCanvas: false
+
 })
 
 const methods = {
+    //offcanvas
+    toggleOffCanvas() {
+        values.showOffCanvas = !values.showOffCanvas
+    },
     splitWords: (str) => {
         str = str.replace(/(^\s*)|(\s*$)/gi, "");
         str = str.replace(/[ ]{2,}/gi, " ");
