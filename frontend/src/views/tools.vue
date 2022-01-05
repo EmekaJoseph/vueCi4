@@ -2,8 +2,8 @@
   <navbarComponent @navigate="navigateToTab" />
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-8 mt-4">
-        <div class="card p-5">
+      <div class="col-md-8 mt-4">
+        <div class="card p-2">
           <div class="card-body">
             <div v-if="isShowingNow(1)">
               <fileUploadComponent />

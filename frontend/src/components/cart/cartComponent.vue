@@ -18,7 +18,7 @@
                         <td>
                             <div v-if="itemExistsOnCart(item.id)">
                                 <button @click="removeFromCart(item.id)" type="button"
-                                    class="btn btn-outline-danger btn-sm">Remove fom cart</button>
+                                    class="btn btn-outline-danger btn-sm">Remove</button>
                             </div>
                             <div v-else>
                                 <button @click="addToCart(item)" type="button" class="btn btn-primary btn-sm">Add To

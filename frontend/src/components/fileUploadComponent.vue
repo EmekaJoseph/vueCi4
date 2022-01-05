@@ -7,12 +7,12 @@
           @change="handleFileUpload" hidden />
 
         <div class="row gx-5">
-          <div class="col-6">
+          <div class="col-md-6">
             <button @click.prevent="chooseImage" class="btn btn-light w-100">
               Upload
             </button>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
             <button v-show="imageURL" @click.prevent="clearImage" class="btn btn-danger w-100">
               Remove
             </button>

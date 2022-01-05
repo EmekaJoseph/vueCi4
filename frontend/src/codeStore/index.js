@@ -11,7 +11,7 @@ const values = reactive({
         { slot: 2, name: "TODO" },
         { slot: 3, name: "DATATABLE" },
         { slot: 4, name: "CART" },
-        { slot: 5, name: "OTHERS" },
+        { slot: 5, name: "COLOR BINDING" },
     ],
     //offcanvas
     showOffCanvas: false

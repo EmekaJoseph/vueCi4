@@ -17,6 +17,27 @@
                 </li>
 
             </ul>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            PAGES
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Page 1</li>
+                                <li>Page 2</li>
+                                <li>Page 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -39,5 +60,34 @@
 <style scoped>
     .show {
         visibility: visible;
+    }
+
+    .list-group-item {
+        border: none;
+        font-weight: bold;
+    }
+
+    .accordion-item {
+        border: none;
+    }
+
+    .accordion-button {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: #000;
+        background-color: #fff;
+    }
+
+    .accordion-body ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .accordion-body ul>li {
+        margin: 0px 0px 10px 20px
     }
 </style>
