@@ -2,7 +2,7 @@
     <div class="offcanvas offcanvas-start" :class="{'show': u_val.showOffCanvas}" data-bs-backdrop="true"
         data-bs-scroll="true" tabindex="-1">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title"><b>Tools:</b></h5>
+            <h5 class="offcanvas-title"><b> Tools:</b></h5>
             <button @click="u_mtd.toggleOffCanvas" type="button" class="btn-close text-reset"
                 aria-label="Close"></button>
         </div>
@@ -30,7 +30,9 @@
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <ul>
-                                <li>Page 1</li>
+                                <li>
+                                    <i class='bx bxs-cog'></i> Page 1
+                                </li>
                                 <li>Page 2</li>
                                 <li>Page 3</li>
                             </ul>
