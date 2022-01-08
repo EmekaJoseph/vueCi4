@@ -12,6 +12,7 @@ const values = reactive({
         { slot: 3, name: "DATATABLE" },
         { slot: 4, name: "CART" },
         { slot: 5, name: "COLOR BINDING" },
+        { slot: 6, name: "QUIZ" },
     ],
     //offcanvas
     showOffCanvas: false
@@ -43,6 +44,10 @@ const methods = {
 
     plural: (num) => {
         return num == 1 ? "" : "s"
+    },
+
+    randomFromArray: (array) => {
+        return array[Math.floor(Math.random() * array.length)]
     }
 
 }

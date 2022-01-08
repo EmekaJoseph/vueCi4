@@ -36,18 +36,18 @@
                                     </td>
                                     <td>
                                         <button @click="item.qty++" class="btn btn-sm p-0 btn-success px-3">
-                                            <i class='bx bxs-up-arrow'></i>
+                                            <i class="bx bxs-up-arrow"></i>.
                                         </button>
                                     </td>
                                     <td>
                                         <button :disabled="ifzeroQty(item)" @click="item.qty--"
                                             class="btn btn-sm p-0 btn-dark px-3">
-                                            <i class='bx bxs-down-arrow'></i>
+                                            <i class="bx bxs-down-arrow"></i>.
                                         </button>
                                     </td>
                                     <td>
                                         <button @click="removeFromCart(item.id)" class="btn btn-danger btn-sm p-0 px-3">
-                                            <i class='bx bx-x'></i>
+                                            <i class="bx bx-x"></i>.
                                         </button>
                                     </td>
                                 </tr>

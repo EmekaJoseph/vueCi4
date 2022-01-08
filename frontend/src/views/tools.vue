@@ -20,6 +20,9 @@
             <div v-else-if="isShowingNow(5)">
               <others />
             </div>
+            <div v-else-if="isShowingNow(6)">
+              <quizComponent />
+            </div>
           </div>
         </div>
       </div>
@@ -36,6 +39,7 @@
   import others from "@/components/otherOpsComponent.vue";
   import cart from "@/components/cart/cartComponent.vue";
   import navbarComponent from "@/components/navbarComponent.vue";
+  import quizComponent from "@/components/quizComponent.vue";
 
   const tabNum = ref(1);
 

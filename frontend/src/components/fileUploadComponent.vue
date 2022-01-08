@@ -40,14 +40,24 @@
   const codeStore = inject("codeStore");
   const baseURL = codeStore.constants.baseURL;
 
-  // //props
+  // //props 1
   // const props = defineProps({
-  //     name: {
-  //         type: String,
-  //         default: "2",
-  //         required: false,
-  //     },
+  // name: {
+  //     type: String,
+  //     default: "2",
+  //     required: false,
+  // },
   // });
+
+  //props 2
+  // defineProps({
+  //   name: {
+  //     type: String,
+  //     default: "2",
+  //     required: false,
+  //   },
+  //   msg: String
+  // })
 
   // //emit
   // const emits = defineEmits(['added'])
