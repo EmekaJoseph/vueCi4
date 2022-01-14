@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import { reactive } from 'vue'
 const constants = {
     baseURL: 'http://localhost',//online
@@ -47,7 +48,8 @@ const methods = {
     },
 
     randomFromArray: (array) => {
-        return array[Math.floor(Math.random() * array.length)]
+        return _.sample(array)
+        // return array[Math.floor(Math.random() * array.length)]
     }
 
 }

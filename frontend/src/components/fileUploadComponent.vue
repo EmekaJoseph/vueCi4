@@ -1,4 +1,5 @@
 <template>
+  <!-- <DatePickerVue lang="eng" /> -->
   <h5 class="card-header">Upload File:</h5>
   <div class="container mt-5">
     <form @submit.prevent="returnSt" ref="ImgForm" id="formID">
@@ -39,6 +40,9 @@
   import axios from "axios";
   const codeStore = inject("codeStore");
   const baseURL = codeStore.constants.baseURL;
+
+  import "vue-datepicker-ui/lib/vuedatepickerui.css";
+  import DatePickerVue from "vue-datepicker-ui";
 
   // //props 1
   // const props = defineProps({

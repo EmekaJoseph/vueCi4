@@ -32,31 +32,31 @@
                                     <td>{{ item.price }}</td>
                                     <td>
                                         <input @keyup="updateQtyFromInput" :id="item.id" ref="currentInput"
-                                            :value="item.qty" style="width: 50px; height: 28px" type="text" />
+                                            :value="item.qty" style="width: 50px; height: 27px" type="text" />
                                     </td>
                                     <td>
                                         <button @click="item.qty++" class="btn btn-sm p-0 btn-success px-3">
-                                            <i class="bx bxs-up-arrow"></i>.
+                                            <i class="bx bxs-up-arrow"></i>
                                         </button>
                                     </td>
                                     <td>
                                         <button :disabled="ifzeroQty(item)" @click="item.qty--"
                                             class="btn btn-sm p-0 btn-dark px-3">
-                                            <i class="bx bxs-down-arrow"></i>.
+                                            <i class="bx bxs-down-arrow"></i>
                                         </button>
                                     </td>
                                     <td>
                                         <button @click="removeFromCart(item.id)" class="btn btn-danger btn-sm p-0 px-3">
-                                            <i class="bx bx-x"></i>.
+                                            <i class="bx bx-x"></i>
                                         </button>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <div class="d-flex justify-content-evenly">
-                            <b>Total Amount:</b>
-                            <span class="ms-2 w-25 row justify-content-center">
+                        <div class="d-flex justify-content-evenly m-3">
+                            <b class="mt-1">Total:</b>
+                            <span class="ms-2 w-100 row justify-content-center">
                                 <input :value="sumOfPrice()" type="text" class="fw-bold" disabled />
                             </span>
                         </div>

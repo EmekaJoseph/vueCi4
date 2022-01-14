@@ -27,6 +27,8 @@ import 'datatables.net-buttons/js/buttons.flash'
 import 'datatables.net-buttons/js/buttons.html5'
 import 'datatables.net-buttons/js/buttons.print'
 
+import _ from 'lodash';
+
 
 
 const mainApp = createApp(App)

@@ -1,5 +1,4 @@
 <template>
-
     <div v-html="topic"></div>
     <div>
         <i class="small">{{ itemInput }}</i>
@@ -12,12 +11,13 @@
         <span v-if="itemsList.length">
             <ul>
                 <li class="d-flex justify-content-between" v-for="(i, index) in itemsList" :key="i.Id">
-                    <span :class="{'text-decoration-line-through': i.Done}"><b>{{ index + 1 }}.</b> {{ i.Text }}</span>
+                    <span :class="{ 'text-decoration-line-through': i.Done }"><b>{{ index + 1 }}.</b> {{ i.Text
+                        }}</span>
                     <span>
                         <div class="form-check">
                             <input @change="updateLocalStorage" v-model="i.Done" class="form-check-input"
-                                type="checkbox" :id="'name'+ i.Id">
-                            <label class="form-check-label" :for="'name'+ i.Id">
+                                type="checkbox" :id="'name' + i.Id" />
+                            <label class="form-check-label" :for="'name' + i.Id">
                                 Completed
                             </label>
                         </div>
@@ -37,11 +37,11 @@
     import { inject, ref, onMounted } from "vue";
 
     onMounted(() => {
-        let storedItemList = localStorage.getItem('vue-todo')
+        let storedItemList = localStorage.getItem("vue-todo");
         if (storedItemList != null) {
-            itemsList.value = JSON.parse(storedItemList)
+            itemsList.value = JSON.parse(storedItemList);
         }
-    })
+    });
 
     const topic = '<h5 class="card-header">Todo List...</h5> <br>';
 
@@ -57,23 +57,20 @@
             });
         }
         itemInput.value = "";
-        updateLocalStorage()
+        updateLocalStorage();
     };
     function removeItem(index) {
         let text = "Sure You Want to Delete this?";
         if (confirm(text) == true) {
             itemsList.value.splice(index, 1);
-            updateLocalStorage()
+            updateLocalStorage();
         }
     }
 
     function updateLocalStorage() {
-        localStorage.setItem('vue-todo', JSON.stringify(itemsList.value))
+        localStorage.setItem("vue-todo", JSON.stringify(itemsList.value));
     }
-
-
 </script>
 
 <style scoped>
-
 </style>

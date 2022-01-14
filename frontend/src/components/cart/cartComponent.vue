@@ -1,16 +1,16 @@
 <template>
   <div>
     <!-- <p> -->
-    <h5 class="card-header">Items for sale:</h5>
+    <h5 class="card-header fw-bold">Items for sale:</h5>
     <!-- </p> -->
-    <p class="float-end">
+    <p class="float-end bg-light mt-1 p-1">
       <b>Cart:</b>
-      <span class="badge badge-pill bg-secondary mx-1">{{
+      <span class="badge badge-pill bg-warning mx-1">{{
         u_val.cart.length
         }}</span>
       <span>
-        <button @click="toggleCartModal" class="btn btn-link btn-sm p-0 mx-1">
-          view cart
+        <button @click="toggleCartModal" class="btn btn-link text-decoration-none btn-sm p-0 mx-1">
+          open
         </button></span>
     </p>
     <div v-if="itemsForSale.length">
@@ -22,7 +22,8 @@
             <td>N{{ item.price }}</td>
             <td>
               <div v-if="itemExistsOnCart(item.id)">
-                <button @click="removeFromCart(item.id)" type="button" class="btn btn-outline-danger btn-sm">
+                <button @click="removeFromCart(item.id)" type="button" style="width: 90px;"
+                  class="btn btn-outline-danger btn-sm">
                   Remove
                 </button>
               </div>
