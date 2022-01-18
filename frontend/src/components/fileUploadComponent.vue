@@ -1,5 +1,4 @@
 <template>
-  <!-- <DatePickerVue lang="eng" /> -->
   <h5 class="card-header">Upload File:</h5>
   <div class="container mt-5">
     <form @submit.prevent="returnSt" ref="ImgForm" id="formID">

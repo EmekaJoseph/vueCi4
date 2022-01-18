@@ -15,6 +15,8 @@ npm install --save jszip
 npm install --save pdfmake
 npm install --save datatables.net-bs5
 npm install --save datatables.net-buttons-bs5
+
+npm install vue3-date-time-picker
  */
 import 'datatables.net-bs5'
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
@@ -28,6 +30,8 @@ import 'datatables.net-buttons/js/buttons.html5'
 import 'datatables.net-buttons/js/buttons.print'
 
 import _ from 'lodash';
+
+import 'vue3-date-time-picker/dist/main.css'
 
 
 
