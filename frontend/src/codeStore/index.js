@@ -8,12 +8,12 @@ const values = reactive({
     response: null,
     cart: [],
     tabNames: [
-        { slot: 1, name: "FILE UPLOAD" },
-        { slot: 2, name: "TODO" },
-        { slot: 3, name: "DATATABLE" },
-        { slot: 4, name: "CART" },
-        { slot: 5, name: "COLOR BINDING" },
-        { slot: 6, name: "QUIZ" },
+        { slot: 1, name: "FILE UPLOAD", icon: 'bx-folder' },
+        { slot: 2, name: "TODO", icon: 'bx-edit' },
+        { slot: 3, name: "DATATABLE", icon: 'bx-table' },
+        { slot: 4, name: "CART", icon: 'bx-cart' },
+        { slot: 5, name: "COLOR BINDING", icon: 'bx-color-fill' },
+        { slot: 6, name: "QUIZ", icon: 'bx-spreadsheet' },
     ],
     //offcanvas
     showOffCanvas: false

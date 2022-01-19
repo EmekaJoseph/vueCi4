@@ -1,6 +1,6 @@
 <template>
   <h5 class="card-header">Upload File:</h5>
-  <div class="container mt-5">
+  <div class="containe mt-5">
     <form @submit.prevent="returnSt" ref="ImgForm" id="formID">
       <div class="mb-3">
         <input class="form-control" accept="image/jpg, image/png" ref="mainImgBtn" id="fileUp" type="file"
@@ -9,7 +9,7 @@
         <div class="row gx-5">
           <div class="col-md-6">
             <button @click.prevent="chooseImage" class="btn btn-light w-100">
-              Upload
+              Upload Image
             </button>
           </div>
           <div class="col-md-6">
@@ -30,7 +30,35 @@
         </div>
       </div>
     </form>
+
+
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">FORM TEST</h5>
+        <small class="text-muted">Insert multiple skills</small>
+        <div v-for="(x, i) in interestArray" :key="i" class="col-md-6 mt-2">
+          <input @keyup="updateInt" class="form-control" :value="x.text" :id="x.id" type="text"
+            placeholder="enter a skill..">
+        </div>
+        <div class="col-md-6">
+          <span v-if="interestArray.length > 1"><button @click.prevent="removePane"
+              class="btn btn-link text-danger addMoreBtn">
+              <i class='bx bx-x'></i>REMOVE</button></span>
+          <span class="float-end"><button @click.prevent="addNewPane" class="btn btn-link addMoreBtn"> <i
+                class='bx bx-plus'></i> ADD
+              MORE</button></span>
+        </div>
+        <div class="col-md-6 my-4">
+          <button @click="submitData" type="button" class="btn btn-secondary">Save Interests</button>
+        </div>
+
+        <div class="mt-5" v-html="dataHtml">
+        </div>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script setup>
@@ -39,9 +67,6 @@
   import axios from "axios";
   const codeStore = inject("codeStore");
   const baseURL = codeStore.constants.baseURL;
-
-  import "vue-datepicker-ui/lib/vuedatepickerui.css";
-  import DatePickerVue from "vue-datepicker-ui";
 
   // //props 1
   // const props = defineProps({
@@ -100,6 +125,35 @@
       alert("Something went wrong abeg");
     }
   }
+
+  // form test
+  const interestArray = ref([{
+    id: 1,
+    text: ''
+  }])
+
+  function addNewPane() {
+    interestArray.value.push({
+      id: interestArray.value.length + 1,
+      text: ''
+    })
+  }
+
+  function removePane() {
+    interestArray.value.pop()
+  }
+
+  const dataHtml = ref(null)
+  function submitData() {
+    let text = interestArray.value.map(x => { return x.text })
+    let texts = text.filter(x => x.text != '')
+    dataHtml.value = (texts.length > 0) ? `You Interest(s): ${texts.toString()}` : ''
+  }
+
+  function updateInt(e) {
+    let thisItem = interestArray.value.find((x) => x.id == e.target.id);
+    thisItem.text = e.target.value;
+  }
 </script>
 
 <style scoped>
@@ -113,5 +167,13 @@
     background-size: contain;
     background-position: center center;
     border-radius: 100%;
+  }
+
+  .addMoreBtn {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
   }
 </style>

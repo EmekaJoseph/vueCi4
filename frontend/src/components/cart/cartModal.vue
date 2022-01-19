@@ -56,7 +56,7 @@
 
                         <div class="d-flex justify-content-evenly m-3">
                             <b class="mt-1">Total:</b>
-                            <span class="ms-2 w-100 row justify-content-center">
+                            <span class="ms-2 row justify-content-center">
                                 <input :value="sumOfPrice()" type="text" class="fw-bold" disabled />
                             </span>
                         </div>
