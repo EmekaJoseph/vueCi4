@@ -37,12 +37,12 @@
       <div class="card-body">
         <h5 class="card-title">FORM TEST</h5>
         <small class="text-muted">Insert multiple skills</small>
-        <div v-for="(x, i) in interestArray" :key="i" class="col-md-6 mt-2">
+        <div v-for="(x, i) in data.interests" :key="i" class="col-md-6 mt-2">
           <input @keyup="updateInt" class="form-control" :value="x.text" :id="x.id" type="text"
             placeholder="enter a skill..">
         </div>
         <div class="col-md-6">
-          <span v-if="interestArray.length > 1"><button @click.prevent="removePane"
+          <span v-if="data.interests.length > 1"><button @click.prevent="removePane"
               class="btn btn-link text-danger addMoreBtn">
               <i class='bx bx-x'></i>REMOVE</button></span>
           <span class="float-end"><button @click.prevent="addNewPane" class="btn btn-link addMoreBtn"> <i
@@ -53,7 +53,7 @@
           <button @click="submitData" type="button" class="btn btn-secondary">Save Interests</button>
         </div>
 
-        <div class="mt-5" v-html="dataHtml">
+        <div class="mt-5" v-html="data.Html">
         </div>
       </div>
     </div>
@@ -126,34 +126,37 @@
     }
   }
 
-  // form test
-  const interestArray = ref([{
-    id: 1,
-    text: ''
-  }])
+  //////////////////////////////////// form test
+  const data = reactive({
+    interests: [{
+      id: 1,
+      text: ''
+    }],
+    Html: null
+  })
 
   function addNewPane() {
-    interestArray.value.push({
-      id: interestArray.value.length + 1,
+    data.interests.push({
+      id: data.interests.length + 1,
       text: ''
     })
   }
 
   function removePane() {
-    interestArray.value.pop()
+    data.interests.pop()
   }
 
-  const dataHtml = ref(null)
   function submitData() {
-    let text = interestArray.value.map(x => { return x.text })
-    let texts = text.filter(x => x.text != '')
-    dataHtml.value = (texts.length > 0) ? `You Interest(s): ${texts.toString()}` : ''
+    let textt = data.interests.map(x => x.text)
+    let texts = textt.filter(x => x != '')
+    data.Html = (texts.length > 0) ? `<span class="text-success">You Interest(s): ${texts.toString()}</span>` : '<span class="text-danger">Please enter skill</span>'
   }
 
   function updateInt(e) {
-    let thisItem = interestArray.value.find((x) => x.id == e.target.id);
+    let thisItem = data.interests.find((x) => x.id == e.target.id);
     thisItem.text = e.target.value;
   }
+  /////////////////////////////////////// form test
 </script>
 
 <style scoped>

@@ -36,6 +36,7 @@ $routes->set404Override(function () {
 $routes->get('/', 'Home::index');
 $routes->add('/submitImage', 'Home::submitImage');
 $routes->add('/getList', 'Home::getList');
+$routes->add('/getBatchList/(:any)', 'Home::getBatchList/$1');
 
 /*
  * --------------------------------------------------------------------

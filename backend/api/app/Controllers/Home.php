@@ -54,9 +54,27 @@ class Home extends BaseController
             ]);
         }
 
-
-
-
         return $this->response->setJSON($myArray);
+    }
+
+    public function getBatchList($num)
+    {
+        $myArray = [];
+
+        for ($i = 0; $i < 15; $i++) {
+            array_push($myArray, (object)[
+                'id' => $i,
+                'title' => 'title_' . ($i + 1) . '-' . uniqid(),
+
+            ]);
+        }
+
+        $chunked = array_chunk($myArray, 5);
+        $tosend = array(
+            'size' => count($myArray),
+            'data' => $chunked[$num - 1]
+        );
+
+        return $this->response->setJSON($tosend);
     }
 }
