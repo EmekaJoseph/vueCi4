@@ -8,20 +8,19 @@
 
         <div class="row gx-5">
           <div class="col-md-6">
-            <button @click.prevent="chooseImage" class="btn btn-light w-100">
-              Upload Image
-            </button>
+            <button @click.prevent="chooseImage" class="btn btn-light w-100">Upload Image</button>
           </div>
           <div class="col-md-6">
-            <button v-show="imageURL" @click.prevent="clearImage" class="btn btn-danger w-100">
-              Remove
-            </button>
+            <button v-show="imageURL" @click.prevent="clearImage" class="btn btn-danger w-100">Remove</button>
           </div>
         </div>
       </div>
 
-      <span v-show="imageURL"><b>Size:</b> {{ imgSize.kb }}Kb, </span>
-      <span v-show="imageURL"> {{ imgSize.mb }}MB </span>
+      <span v-show="imageURL">
+        <b>Size:</b>
+        {{ imgSize.kb }}Kb,
+      </span>
+      <span v-show="imageURL">{{ imgSize.mb }}MB</span>
       <div v-show="imageURL" class="imagePreviewWrapper" :style="{ 'background-image': `url(${imageURL})` }"></div>
 
       <div class="col-6 float-end">
@@ -31,34 +30,35 @@
       </div>
     </form>
 
-
-
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">FORM TEST</h5>
         <small class="text-muted">Insert multiple skills</small>
         <div v-for="(x, i) in data.interests" :key="i" class="col-md-6 mt-2">
           <input @keyup="updateInt" class="form-control" :value="x.text" :id="x.id" type="text"
-            placeholder="enter a skill..">
+            placeholder="enter a skill.." />
         </div>
         <div class="col-md-6">
-          <span v-if="data.interests.length > 1"><button @click.prevent="removePane"
-              class="btn btn-link text-danger addMoreBtn">
-              <i class='bx bx-x'></i>REMOVE</button></span>
-          <span class="float-end"><button @click.prevent="addNewPane" class="btn btn-link addMoreBtn"> <i
-                class='bx bx-plus'></i> ADD
-              MORE</button></span>
+          <span v-if="data.interests.length > 1">
+            <button @click.prevent="removePane" class="btn btn-link text-danger addMoreBtn">
+              <i class="bx bx-x"></i>REMOVE
+            </button>
+          </span>
+          <span class="float-end">
+            <button @click.prevent="addNewPane" class="btn btn-link addMoreBtn">
+              <i class="bx bx-plus"></i> ADD
+              MORE
+            </button>
+          </span>
         </div>
         <div class="col-md-6 my-4">
-          <button @click="submitData" type="button" class="btn btn-secondary">Save Interests</button>
+          <button @click="submitData" type="button" class="btn btn-secondary">Save My Skills</button>
         </div>
 
-        <div class="mt-5" v-html="data.Html">
-        </div>
+        <div class="mt-5" v-html="data.Html"></div>
       </div>
     </div>
   </div>
-
 </template>
 
 <script setup>
@@ -171,6 +171,10 @@
     background-position: center center;
     border-radius: 100%;
   }
+
+  /* .hgt{
+    w
+  } */
 
   .addMoreBtn {
     margin: 0px;

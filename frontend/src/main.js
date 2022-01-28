@@ -29,12 +29,20 @@ import 'datatables.net-buttons/js/buttons.flash'
 import 'datatables.net-buttons/js/buttons.html5'
 import 'datatables.net-buttons/js/buttons.print'
 
+// npm i --save lodash
 import _ from 'lodash';
 
+//npm install vue3-date-time-picker   
 import 'vue3-date-time-picker/dist/main.css'
+
+// npm install -S vue-sweetalert2
+import Swal from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
 
 
 
 const mainApp = createApp(App)
 mainApp.use(router)
+mainApp.use(Swal)
 mainApp.mount('#app')

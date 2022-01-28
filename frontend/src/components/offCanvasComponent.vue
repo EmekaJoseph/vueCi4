@@ -91,7 +91,7 @@
   }
 
   .offcanvas {
-    width: 300px;
+    width: 270px;
   }
 
   .bx {

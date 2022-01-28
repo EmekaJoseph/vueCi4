@@ -5,6 +5,7 @@ button:focus,
 .page-link:focus {
     outline: none !important;
     box-shadow: none !important;
+    /* background-color: none; */
 }
 
 

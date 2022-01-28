@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\I18n\Time;
+// use CodeIgniter\I18n\TimeDifference;
+
 
 class Home extends BaseController
 {
@@ -60,6 +63,7 @@ class Home extends BaseController
     public function getBatchList($num)
     {
         $myArray = [];
+        $divInto = 5;
 
         for ($i = 0; $i < 15; $i++) {
             array_push($myArray, (object)[
@@ -69,10 +73,18 @@ class Home extends BaseController
             ]);
         }
 
-        $chunked = array_chunk($myArray, 5);
+        $chunked = array_chunk($myArray, $divInto);
+        $time1 = Time::parse('1/28/2022 08:35:01');
+        $time2 = new Time('now');
+        $diff = $time2->difference($time1);
         $tosend = array(
-            'size' => count($myArray),
-            'data' => $chunked[$num - 1]
+            'arraySize' => count($myArray),
+            'data' => $chunked[$num - 1],
+            'div' => count($chunked),
+            'time' => new Time('now'),
+            'parsed' => $time1->isBefore($time2),
+            'parsed2' => $time2->isAfter($time1),
+            'timeDiff' => $diff->humanize()
         );
 
         return $this->response->setJSON($tosend);

@@ -1,6 +1,6 @@
 <template>
     <div class="m-3 mx-2 d-flex justify-content-between">
-        <div>Page: <span class="badge badge-pill bg-info">{{currentShowing}}</span></div>
+        <div>Page: <span class="badge badge-pill bg-info">{{currentShowing}} / {{paginateSize}}</span></div>
         <div><input @keyup="searchTable()" class="form-control form-control-sm" placeholder="search..." type="text"
                 id="myInput">
         </div>
@@ -26,21 +26,22 @@
     </div>
     <div class="float-end">
         <nav aria-label="Page navigation example">
-            <ul class="pagination pagination-sm">
+            <ul class="pagination">
                 <li class="page-item">
-                    <a @click="move('p')" class="page-link" :class="{'disabled': isprev()}" href="#"
+                    <a @click.prevent="move('p')" class="page-link" :class="{'disabled': isprev()}" href=""
                         aria-label="Previous">
-                        <span aria-hidden="true">Previous</span>
+                        <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
-                <li v-for="(i, index) in paginateSize" class="page-item">
-                    <a @click="loadTable(index+1)" class="page-link" href="#">{{index+1}}</a>
+                <li v-for="(i, index) in paginateSize" class="page-item" :class="{'active': isShowing(index+1)}">
+                    <a @click.prevent="loadTable(index+1)" class="page-link" href="">{{index+1}}</a>
                 </li>
 
 
                 <li class="page-item">
-                    <a @click="move('n')" class="page-link" :class="{'disabled': isnext()}" href="#" aria-label="Next">
-                        <span aria-hidden="true">Next</span>
+                    <a @click.prevent="move('n')" class="page-link" :class="{'disabled': isnext()}" href=""
+                        aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
             </ul>
@@ -81,7 +82,8 @@
         try {
             var { data } = await axios.get(url);
             received.value = data.data
-            paginateSize.value = data.size / 5
+            paginateSize.value = data.div
+            console.log(data);
         } catch (error) {
             console.log(error)
         }
@@ -111,6 +113,9 @@
             }
         }
     }
+    const isShowing = (num) => {
+        return currentShowing.value == num ? true : false
+    }
 
 </script>
 
@@ -119,5 +124,13 @@
         pointer-events: none;
         cursor: default;
         color: #ccc;
+    }
+
+
+    .pagination .active a {
+        background-color: #0dcaf0;
+        border: #0dcaf0 1px solid;
+        cursor: default;
+        pointer-events: none;
     }
 </style>
