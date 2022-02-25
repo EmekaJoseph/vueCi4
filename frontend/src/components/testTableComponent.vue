@@ -33,7 +33,8 @@
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
-                <li v-for="(i, index) in paginateSize" class="page-item" :class="{'active': isShowing(index+1)}">
+                <li v-for="(i, index) in paginateSize" :key="index" class="page-item"
+                    :class="{'active': isShowing(index+1)}">
                     <a @click.prevent="loadTable(index+1)" class="page-link" href="">{{index+1}}</a>
                 </li>
 
@@ -51,10 +52,10 @@
 
 <script setup>
     import { inject, ref, onMounted } from "vue";
-    import axios from "axios";
+
+    import apiCall from '@/codeStore/apiStore.js'
 
     const codeStore = inject("codeStore");
-    const baseURL = codeStore.constants.baseURL;
 
     const received = ref([])
     const paginateSize = ref(0)
@@ -78,9 +79,8 @@
 
     async function loadTable(num) {
         currentShowing.value = num
-        let url = baseURL + `/getBatchList/${num}`
         try {
-            var { data } = await axios.get(url);
+            var { data } = await apiCall.getBatchList(num)
             received.value = data.data
             paginateSize.value = data.div
             console.log(data);

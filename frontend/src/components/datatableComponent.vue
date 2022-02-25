@@ -1,6 +1,6 @@
 <template>
     <div class="table-responsive">
-        <table class="table" id="myTable">
+        <table class="table table-sm table-hover" id="myTable">
             <thead>
                 <tr>
                     <th scope="col">S/N</th>
@@ -16,11 +16,11 @@
 
 <script setup>
     import { inject, ref, onMounted } from "vue";
-    import axios from "axios";
     import $ from "jquery";
 
+    import apiCall from '@/codeStore/apiStore.js'
+
     const codeStore = inject("codeStore");
-    const baseURL = codeStore.constants.baseURL;
 
     onMounted(() => {
         fetchFreeAPI();
@@ -30,9 +30,8 @@
     const tableArray = ref([]);
     const fetchFreeAPI = async () => {
         // let url = "https://jsonplaceholder.typicode.com/posts";
-        let url = baseURL + '/getList'
         try {
-            var { data } = await axios.get(url);
+            var { data } = await apiCall.getList();
             console.log(data);
             tableArray.value = data;
 
