@@ -10,6 +10,14 @@ const apiClient = axios.create({
     }
 })
 
+const apiClientImage = axios.create({
+    baseURL: 'http://localhost',
+    headers: {
+        "Content-Type": "multipart/form-data",
+        "X-Requested-With": "XMLHttpRequest",
+    }
+})
+
 export default {
     getBatchList(num) {
         return apiClient.get('/getBatchList/' + num)
@@ -17,6 +25,10 @@ export default {
 
     getList() {
         return apiClient.get('/getList')
+    },
+
+    uploadImage(imageData) {
+        return apiClientImage.post('/submitImage', imageData)
     }
 
 

@@ -24,7 +24,9 @@ class Home extends BaseController
         // $mett = $this->request->getVar('image');
         $file = $this->request->getFile('image');
 
-        $name = $file->getRandomName();
+        $timestamp = time();
+        $name = $timestamp;
+        // $name = $file->getRandomName();
         $size = $file->getSize('mb');
         $ext = $file->getExtension();
         $type = $file->getType();
@@ -33,6 +35,18 @@ class Home extends BaseController
         if ($file->isValid() && !$file->hasMoved()) {
             $file->move('images/uploads/', $name);
         }
+
+        ///////////// manimulate the image, save a copy
+        $image = \Config\Services::image()
+            ->withFile('images/uploads/' . $name)
+            // ->reorient()
+            // ->rotate(90)
+            // ->crop(100, 100, 0, 0)
+            ->save('images/uploads/' . $name . '_thumb.jpg', 50);
+
+
+        // delete the originalImage
+        //unlink('images/uploads/' . $name);
 
         $dataToSave = array(
             'title' => $name,
@@ -74,17 +88,18 @@ class Home extends BaseController
         }
 
         $chunked = array_chunk($myArray, $divInto);
-        $time1 = Time::parse('1/28/2022 08:35:01');
-        $time2 = new Time('now');
-        $diff = $time2->difference($time1);
+        $exampleTime = Time::parse('2/28/2022 08:35:01');
+        $timeNow = new Time('now');
+        $diff = $timeNow->difference($exampleTime);
         $tosend = array(
             'arraySize' => count($myArray),
+            'arrayChunked' => $chunked,
             'data' => $chunked[$num - 1],
             'div' => count($chunked),
-            'time' => new Time('now'),
-            'parsed' => $time1->isBefore($time2),
-            'parsed2' => $time2->isAfter($time1),
-            'timeDiff' => $diff->humanize()
+            'timeNow' => new Time('now'),
+            'parsed' => $exampleTime->isBefore($timeNow),
+            'parsed2' => $timeNow->isAfter($exampleTime),
+            'timeDiff' => $diff->humanize(),
         );
 
         return $this->response->setJSON($tosend);
