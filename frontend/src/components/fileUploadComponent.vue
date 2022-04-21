@@ -1,63 +1,72 @@
 <template>
-  <h5 class="card-header">Upload File:</h5>
-  <div class="containe mt-5">
-    <form @submit.prevent="returnSt" ref="ImgForm" id="formID">
-      <div class="mb-3">
-        <input
-          class="form-control"
-          accept="image/jpg, image/png"
-          ref="mainImgBtn"
-          id="fileUp"
-          type="file"
-          @change="handleFileUpload"
-          hidden
-        />
+  <h5 class="card-header">Input File:</h5>
+  <div class="card-body my-3">
+    <div class="row">
+      <div class="col-xl-6 col-md-12 mb-2">
+        <div class="card h-100">
+          <div class="card-header border-0">Click</div>
+          <div class="card-body">
+            <form @submit.prevent="returnSt" ref="ImgForm" id="formID">
+              <div class="mb-3">
+                <input class="form-control" accept="image/jpg, image/png" ref="mainImgBtn" id="fileUp" type="file"
+                  @change="handleFileUpload" hidden />
 
-        <div class="row gx-5">
-          <div class="col-md-6">
-            <button @click.prevent="chooseImage" class="btn btn-light w-100">Upload Image</button>
-          </div>
-          <div class="col-md-6">
-            <button
-              v-show="imageURL"
-              @click.prevent="clearImage"
-              class="btn btn-danger w-100"
-            >Remove</button>
+                <div class="row gx-5">
+                  <div class="col-md-6">
+                    <button @click.prevent="chooseImage" class="btn btn-light w-100">Upload Image</button>
+                  </div>
+                  <div class="col-md-6">
+                    <button v-show="imageURL" @click.prevent="clearImage" class="btn btn-danger w-100">Remove</button>
+                  </div>
+                </div>
+              </div>
+
+              <span v-show="imageURL">
+                <b>Size:</b>
+                {{ imgSize.kb }}Kb,
+              </span>
+              <span v-show="imageURL">{{ imgSize.mb }}MB</span>
+              <div v-show="imageURL" class="imagePreviewWrapper" :style="{ 'background-image': `url(${imageURL})` }">
+              </div>
+
+              <div class="col-6 float-end">
+                <div v-show="imageURL" class="mt-3">
+                  <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
 
-      <span v-show="imageURL">
-        <b>Size:</b>
-        {{ imgSize.kb }}Kb,
-      </span>
-      <span v-show="imageURL">{{ imgSize.mb }}MB</span>
-      <div
-        v-show="imageURL"
-        class="imagePreviewWrapper"
-        :style="{ 'background-image': `url(${imageURL})` }"
-      ></div>
-
-      <div class="col-6 float-end">
-        <div v-show="imageURL" class="mt-3">
-          <button type="submit" class="btn btn-primary w-100">Submit</button>
+      <div class="col-xl-6 col-md-12">
+        <div class="card">
+          <div class="card-header border-0">DropZone</div>
+          <div class="card-body">
+            <div class="row justify-content-center">
+              <DropZone @drop.prevent="drop" @change="selectedFile" />
+            </div>
+            <div class="p-4 text-center">
+              <div v-if="dropzoneFile" class="p-2 alert alert-info">
+                <i class="bi bi-check-circle-fill"></i>&nbsp;<b>File Name:</b> {{ dropzoneFile.name }}
+              </div>
+              <div v-else class="p-2">
+                Select a file
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </form>
 
-    <div class="card">
+      </div>
+    </div>
+
+    <div class="card mt-5">
+      <h5 class="card-header">FORM TEST</h5>
       <div class="card-body">
-        <h5 class="card-title">FORM TEST</h5>
         <small class="text-muted">Insert multiple skills</small>
         <div v-for="(x, i) in data.interests" :key="i" class="col-md-6 mt-2">
-          <input
-            @keyup="updateInt"
-            class="form-control"
-            :value="x.text"
-            :id="x.id"
-            type="text"
-            placeholder="enter a skill.."
-          />
+          <input @keyup="updateInt" class="form-control" :value="x.text" :id="x.id" type="text"
+            placeholder="enter a skill.." />
         </div>
         <div class="col-md-6">
           <span v-if="data.interests.length > 1">
@@ -85,10 +94,23 @@
 <script setup>
 import { inject, onMounted, ref, computed, reactive } from "vue";
 import { useImageUpload } from "@/codeStore/composables/useImageUpload.js";
+import DropZone from "./dropZoneComponent.vue";
 // import axios from "axios";
 import apiCall from '@/codeStore/apiStore.js'
 const codeStore = inject("codeStore");
 const baseURL = codeStore.constants.baseURL;
+
+
+
+
+let dropzoneFile = ref("");
+const drop = (e) => {
+  dropzoneFile.value = e.dataTransfer.files[0];
+};
+const selectedFile = () => {
+  dropzoneFile.value = document.querySelector(".dropzoneFile").files[0];
+};
+
 
 // //props 1
 // const props = defineProps({
@@ -185,8 +207,8 @@ function updateInt(e) {
 <style scoped>
 .imagePreviewWrapper {
   background-repeat: no-repeat;
-  width: 250px;
-  height: 250px;
+  width: 50px;
+  height: 50px;
   display: block;
   cursor: pointer;
   margin: 0 auto 30px;
