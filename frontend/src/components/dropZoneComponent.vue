@@ -5,7 +5,7 @@
         <span></span>
         <span>Drag & Drop File OR</span>
         <span>Click to Add</span>
-        <input ref="fileBtn" type="file" id="dropzoneFile" class="dropzoneFile" />
+        <input accept="image/jpg, image/png" type="file" id="dropzoneFile" class="dropzoneFile" />
     </div>
 </template>
 
@@ -15,14 +15,14 @@ export default {
     name: "DropZone",
     setup() {
         const active = ref(false);
-        const fileBtn = ref(null)
+
         const clickFileBtn = () => {
-            fileBtn.value.click()
+            document.getElementById('dropzoneFile').click()
         }
         const toggleActive = () => {
             active.value = !active.value;
         };
-        return { active, toggleActive, fileBtn, clickFileBtn };
+        return { active, toggleActive, clickFileBtn };
     },
 };
 </script>

@@ -36,18 +36,18 @@
                                     </td>
                                     <td>
                                         <button @click="item.qty++" class="btn btn-sm p-0 btn-success px-3">
-                                            <i class="bx bxs-up-arrow"></i>
+                                            <i class="bi bi-arrow-up"></i>
                                         </button>
                                     </td>
                                     <td>
                                         <button :disabled="ifzeroQty(item)" @click="item.qty--"
                                             class="btn btn-sm p-0 btn-dark px-3">
-                                            <i class="bx bxs-down-arrow"></i>
+                                            <i class="bx bi-arrow-down"></i>
                                         </button>
                                     </td>
                                     <td>
                                         <button @click="removeFromCart(item.id)" class="btn btn-danger btn-sm p-0 px-3">
-                                            <i class="bx bx-x"></i>
+                                            <i class="bi bi-x"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -74,60 +74,60 @@
 </template>
 
 <script setup>
-    import { ref, inject, watch } from "vue";
+import { ref, inject, watch } from "vue";
 
-    const codeStore = inject("codeStore");
-    const u_val = codeStore.values;
-    // const u_methd = codeStore.methods;
+const codeStore = inject("codeStore");
+const u_val = codeStore.values;
+// const u_methd = codeStore.methods;
 
-    //emit
-    const emits = defineEmits(["close"]);
-    function close() {
-        emits("close");
-    }
+//emit
+const emits = defineEmits(["close"]);
+function close() {
+    emits("close");
+}
 
-    function removeFromCart(id) {
-        u_val.cart = u_val.cart.filter((item) => item.id !== id);
-    }
+function removeFromCart(id) {
+    u_val.cart = u_val.cart.filter((item) => item.id !== id);
+}
 
-    const sumOfPrice = () => {
-        let sum = 0.0;
-        u_val.cart.forEach((item) => {
-            sum += item.price * item.qty;
-        });
-        return sum;
+const sumOfPrice = () => {
+    let sum = 0.0;
+    u_val.cart.forEach((item) => {
+        sum += item.price * item.qty;
+    });
+    return sum;
+};
+
+const ifzeroQty = (thisItem) => {
+    return thisItem.qty <= 1 ? true : false;
+};
+
+function updateQtyFromInput(e) {
+    let thisItem = u_val.cart.find((x) => x.id == e.target.id);
+    thisItem.qty = e.target.value;
+}
+
+function checkOut() {
+    let itemsToBuy = {
+        items: u_val.cart,
+        total: sumOfPrice(),
     };
-
-    const ifzeroQty = (thisItem) => {
-        return thisItem.qty <= 1 ? true : false;
-    };
-
-    function updateQtyFromInput(e) {
-        let thisItem = u_val.cart.find((x) => x.id == e.target.id);
-        thisItem.qty = e.target.value;
-    }
-
-    function checkOut() {
-        let itemsToBuy = {
-            items: u_val.cart,
-            total: sumOfPrice(),
-        };
-        console.log(itemsToBuy);
-        close();
-    }
+    console.log(itemsToBuy);
+    close();
+}
 </script>
 
 <style scoped>
-    .modal {
-        display: inline;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
+.modal {
+    display: inline;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
-    input:focus,
-    select:focus,
-    textarea:focus,
-    button:focus {
-        outline: none;
-        box-shadow: none;
-    }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
 </style>

@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use CodeIgniter\I18n\Time;
+use stdClass;
+
 // use CodeIgniter\I18n\TimeDifference;
 
 
@@ -77,29 +79,36 @@ class Home extends BaseController
     public function getBatchList($num)
     {
         $myArray = [];
-        $divInto = 5;
+        $divInto = 6;
 
-        for ($i = 0; $i < 15; $i++) {
+        for ($i = 0; $i < 25; $i++) {
             array_push($myArray, (object)[
                 'id' => $i,
-                'title' => 'title_' . ($i + 1) . '-' . uniqid(),
+                'title' => 'title' . ($i + 1) . '-t' . time() . '-u' . uniqid() . '-r' . mt_rand(3, 6),
 
             ]);
         }
 
         $chunked = array_chunk($myArray, $divInto);
+
         $exampleTime = Time::parse('2/28/2022 08:35:01');
         $timeNow = new Time('now');
         $diff = $timeNow->difference($exampleTime);
+
+        $timeData = (object)[
+            "a_timeNow" => $timeNow,
+            "b_exampleTime" => $exampleTime,
+            "exampletime_is_before_now" => $exampleTime->isBefore($timeNow),
+            "now_is_after_exampletime" => $timeNow->isAfter($exampleTime),
+            "c_timeDiff" => $diff->humanize(),
+        ];
+
         $tosend = array(
             'arraySize' => count($myArray),
             'arrayChunked' => $chunked,
             'data' => $chunked[$num - 1],
             'div' => count($chunked),
-            'timeNow' => new Time('now'),
-            'parsed' => $exampleTime->isBefore($timeNow),
-            'parsed2' => $timeNow->isAfter($exampleTime),
-            'timeDiff' => $diff->humanize(),
+            'timeData' => $timeData,
         );
 
         return $this->response->setJSON($tosend);

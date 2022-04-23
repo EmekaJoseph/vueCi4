@@ -1,0 +1,34 @@
+CRITICAL - 2022-04-23 11:31:51 --> Undefined array key 3
+#0 C:\xampp\htdocs\vueCi4\backend\api\app\Controllers\Home.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 97)
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->getBatchList('4')
+#2 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-23 11:31:56 --> Undefined array key 3
+#0 C:\xampp\htdocs\vueCi4\backend\api\app\Controllers\Home.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 97)
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->getBatchList('4')
+#2 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-23 11:32:04 --> Undefined array key 3
+#0 C:\xampp\htdocs\vueCi4\backend\api\app\Controllers\Home.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 97)
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->getBatchList('4')
+#2 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-23 11:32:11 --> Undefined array key 3
+#0 C:\xampp\htdocs\vueCi4\backend\api\app\Controllers\Home.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 97)
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->getBatchList('4')
+#2 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-23 12:27:06 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(824): App\Controllers\Home->getBatchList('2')
+#1 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\vueCi4\backend\api\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\vueCi4\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
