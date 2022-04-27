@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .cards {
+        display: flex;
+    }
+
+    .card {
+        border: 1px solid #ccc;
+        width: 200px;
+        margin: 30px;
+    }
+
+    .card-head {
+        padding: 10px;
+        border-bottom: 1px #ccc solid;
+        background-color: #eee;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .info {
+        float: right;
+        padding: 1px 6px;
+        border-radius: 100%;
+        background-color: rgb(85, 82, 82);
+        color: #fff;
+        font-weight: lighter;
+        font-size: 14px;
+    }
+
+    .card-body {
+        padding: 20px 10px 20px;
+    }
+
+    .text-center {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div>
+        <!-- <h1 class="text-center">JS TEST</h1> <br> -->
+        <span class="cards" id="displayPane"></span>
+    </div>
+
+    <script>
+
+        let mydata = [{ tag: 'e', name: 'emeka1' }, { tag: 'e', name: 'emeka2' }, { tag: 'e', name: 'emeka3' }, { tag: 'e', name: 'newGuy' }]
+        // console.log(mydata);
+        let onlyTagsTemp = mydata.map(x => x.tag)
+        let onlyTags = [...new Set(onlyTagsTemp)]
+        let groupedSet = []
+
+        onlyTags.forEach(tag => {
+            let newObj = {}
+            newObj.group = tag
+            let tempArray = []
+            mydata.forEach(element => {
+                if (element.tag.toLowerCase() == tag.toLowerCase()) {
+                    tempArray.push(
+                        element
+                    )
+                }
+
+            });
+            newObj.children = tempArray
+            groupedSet.push(newObj)
+
+        });
+
+        console.log('group:', groupedSet);
+
+
+
+        // const groupBy = (array, key) =>
+        // {
+        //     return array.reduce((previous, current) =>
+        //     {
+        //         (previous[current[key]] = previous[current[key]] || []).push(current)
+        //         return previous
+        //     }, {})
+        // }
+        // let groupedArray = groupBy(mydata, "tag");
+
+
+        function displayGrouped() {
+            let str = ''
+            groupedSet.forEach(el => {
+                str += `<div class="card">`
+                str += `<div class="card-head">GROUP: ${el.group} <span class="info">${el.children.length}</span></div>`
+                str += `<div class="card-body">`
+                str += `<ul>`
+                for (k in el.children) {
+                    str += ` <li>${el.children[k].name}</li>`
+                }
+                str += `</ul>`
+                str += `</div>`
+                str += `</div>`
+            });
+            return str
+        }
+
+
+        document.getElementById('displayPane').innerHTML = displayGrouped()
+
+
+
+
+
+
+
+    </script>
+
+</html>

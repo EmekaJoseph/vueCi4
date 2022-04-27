@@ -29,17 +29,18 @@
             </div>
 
             <div class="card-body">
-                <p class="small text-muted">enter number from 1 - {{ totalNum }}, to fill the boxes</p>
+                <p class="small text-muted">enter number from 1 - {{ totalNum }}, or click to fill the circles</p>
                 <div class="row justify-content-center">
                     <div class="col-md-2">
                         <input type="number" class="form-control" v-model.number="rateInput">
                     </div>
                     <div class="col-md-10">
                         <div class="d-flex">
-                            <div class="box box-fill" v-for="i in chkdInput()" :key="i">
+                            <div class="box box-fill" @click="fillUpTo(i)" v-for="i in chkdInput()" :key="i">
                             </div>
 
-                            <div class="box" v-for="i in (totalNum - chkdInput())" :key="i">
+                            <div class="box" @click="fillUpTo(i + chkdInput())" v-for="i in (totalNum - chkdInput())"
+                                :key="i">
                             </div>
                         </div>
                     </div>
@@ -72,6 +73,10 @@ const chkdInput = () => {
     return numR
 }
 
+
+function fillUpTo(i) {
+    rateInput.value = i
+}
 </script>
 
 <style scoped>
@@ -86,6 +91,11 @@ const chkdInput = () => {
     padding: 10px;
     margin: 7px;
     border-radius: 100%;
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: scale(1.55);
 }
 
 .box-fill {

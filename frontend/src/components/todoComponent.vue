@@ -38,7 +38,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="(i, index) in itemsList" :key="i.Id">
+                                    <tr v-for="(i, index) in sortedList" :key="i.Id">
                                         <th>{{ index + 1 }}.</th>
                                         <td>
                                             <span :class="{ 'doneEle': i.Done }">
@@ -47,13 +47,14 @@
                                         </td>
                                         <td>
                                             <span :class="{ 'doneEle': i.Done }">
-                                                {{ i.Date }}
+                                                {{ customFormatDate(i.Date) }}
                                             </span>
                                         </td>
                                         <td>
                                             <div class="form-check">
                                                 <input @change="updateLocalStorage" v-model="i.Done"
-                                                    class="form-check-input" type="checkbox" :id="'name' + i.Id" />
+                                                    class="form-check-input" type="checkbox" :id="'name' + i.Id"
+                                                    :disabled="isOldDate(i.Date)" />
                                                 <label class="form-check-label" :for="'name' + i.Id">
                                                     Completed
                                                 </label>
@@ -80,7 +81,7 @@
 </template>
 
 <script setup>
-import { inject, ref, onMounted, reactive } from "vue";
+import { inject, ref, onMounted, reactive, computed } from "vue";
 import DatepickerVue from 'vue3-date-time-picker';
 const Swal = inject('$swal')
 
@@ -88,9 +89,22 @@ const Swal = inject('$swal')
 onMounted(() => {
     let storedItemList = localStorage.getItem("vue-todo");
     if (storedItemList != null) {
-        itemsList.value = JSON.parse(storedItemList);
+        let todos = JSON.parse(storedItemList)
+
+        todos.forEach(todo => {
+            if (isOldDate(todo.Date)) {
+                todo.Done = true
+            }
+        });
+        itemsList.value = todos;
     }
 });
+
+const isOldDate = (dd) => {
+    let todayDate = (new Date()).setHours(0, 0, 0, 0)
+    let formatedDate = new Date(dd).setHours(0, 0, 0, 0)
+    return (todayDate > formatedDate) ? true : false
+}
 
 const dom = reactive({
     topic: 'Todo List...',
@@ -106,6 +120,12 @@ const form = reactive({
 
 // list
 const itemsList = ref([]);
+const sortedList = computed(() => {
+    return itemsList.value.sort(function (a, b) {
+        return new Date(a.Date) - new Date(b.Date);
+    });
+})
+
 const dateInputRef = ref(null)
 const addToList = () => {
     form.textError = false
@@ -132,10 +152,11 @@ const addToList = () => {
     else {
         itemsList.value.push({
             Text: form.textInput,
-            Date: customFormatDate(form.inputDate),
+            Date: form.inputDate,
             Id: Date.now(),
             Done: false,
         });
+        console.log(form.inputDate);
         resetForm()
         dom.alertmsg = `<span class="text-success text-center">Added to list Successfully!</span>`
         setTimeout(() => {
@@ -155,7 +176,8 @@ function resetForm() {
     dateInputRef.value.clearValue()
 }
 
-const customFormatDate = (dateValue) => {
+const customFormatDate = (rDate) => {
+    let dateValue = new Date(rDate)
     const day = dateValue.getDate();
     const month = dateValue.getMonth() + 1;
     const year = dateValue.getFullYear();
@@ -192,6 +214,7 @@ function removeItem(index) {
 function updateLocalStorage() {
     localStorage.setItem("vue-todo", JSON.stringify(itemsList.value));
 }
+
 </script>
 
 <style scoped>
